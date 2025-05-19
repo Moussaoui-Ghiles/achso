@@ -1,0 +1,329 @@
+/* Exercise-specific styles */
+
+/* Custom properties */
+:root {
+    --primary-color: #3D5A80; /* Dark blue for Politik/Democracy section */
+    --primary-dark: #2A3F5B;
+    --text-color: #2d3436;
+    --background-color: #f8f9fa;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.05);
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
+
+.exercise-header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: white;
+    font-weight: 500;
+    min-width: 40px;
+}
+
+/* Main content styles */
+.exercise-content {
+    margin-top: 80px;
+    padding: 40px 0;
+}
+
+.slides-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    padding: 40px;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.prev-btn, .next-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.prev-btn:disabled:hover, .next-btn:disabled:hover {
+    background-color: #e0e0e0;
+}
+
+.highlight {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Text content styling */
+.text-content {
+    max-width: 100%;
+    line-height: 1.6;
+}
+
+.text-content h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.text-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.text-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.text-content p {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+/* Custom styles for this exercise */
+.highlight-box {
+    background-color: rgba(61, 90, 128, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.quote-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Blopp character styles */
+.blopp-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    height: 250px;
+}
+
+.blopp-animation {
+    width: 250px;
+    height: 250px;
+    border: none;
+}
+
+/* Image container styles */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.full-width-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.centered-image {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+/* CTA styles */
+.cta-container {
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button i {
+    font-size: 1.2rem;
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Video container styles */
+.video-container {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .slide {
+        padding: 30px 20px;
+    }
+    
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+    }
+    
+    .progress-bar {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        padding: 20px 15px;
+    }
+    
+    .buttons-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .prev-btn, .next-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}

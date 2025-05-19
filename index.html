@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AchSo! Lernplattform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/achso-logo.png" alt="AchSo! Logo" class="logo">
+                    <h1>AchSo!</h1>
+                </div>
+                <div class="header-controls">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Mein Profil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">AchSo! Lernplattform</h1>
+                    <p class="hero-subtitle">Eine niedrigschwellige, mehrsprachige Lernumgebung für neu zugewanderte Migrant*innen und Geflüchtete</p>
+                    <a href="#courses" class="cta-button">Übungen entdecken</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/achso/blopp-character.png" alt="Blopp Charakter" class="blopp-hero-image">
+                </div>
+            </section>
+            
+            <!-- Course Content -->
+            <section id="courses" class="courses-section">
+                <h2 class="page-title">Lernmodule</h2>
+                <p class="page-subtitle">Entdecke unsere interaktiven Lernmodule und starte deine Bildungsreise</p>
+            
+            <div class="courses-list">
+                <!-- Course 1: Communication -->
+                <div class="course-container">
+                    <div class="course-header" data-course-id="1" style="background-color: #4882CF;">
+                        <div class="course-title-container">
+                            <span class="course-icon">💬</span>
+                            <h3 class="course-title">Kommunication</h3>
+                        </div>
+                        <button class="toggle-btn" data-course-id="1">
+                            <span class="btn-text" 
+                                  data-lang-de="Übungen anzeigen" 
+                                  data-lang-en="View exercises"
+                                  data-lang-ar="عرض التمارين" 
+                                  data-lang-fa="نمایش تمرین‌ها">
+                                Übungen anzeigen
+                            </span>
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="exercises-list" id="exercises-course-1">
+                        <!-- Exercise items -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">1.1</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Wahrnehmung und Wahrheit" 
+                                      data-lang-en="Perception and Truth">
+                                    Wahrnehmung und Wahrheit
+                                </span>
+                            </div>
+                            <a href="courses/kommunikation/wahrnehmung-und-wahrheit/index.html" class="start-btn" style="background-color: #4882CF;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">1.2</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Interkulturelle Kommunikation" 
+                                      data-lang-en="Intercultural Communication">
+                                    Interkulturelle Kommunikation
+                                </span>
+                            </div>
+                            <a href="courses/kommunikation/interkulturelle-kommunikation/index.html" class="start-btn" style="background-color: #4882CF;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: Values and Identity -->
+                <div class="course-container">
+                    <div class="course-header" data-course-id="2" style="background-color: #F18F01;">
+                        <div class="course-title-container">
+                            <span class="course-icon">🧠</span>
+                            <h3 class="course-title" 
+                                data-lang-de="Werte und Identität" 
+                                data-lang-en="Values and Identity"
+                                data-lang-ar="القيم والهوية" 
+                                data-lang-fa="ارزش‌ها و هویت">
+                                Werte und Identität
+                            </h3>
+                        </div>
+                        <button class="toggle-btn" data-course-id="2">
+                            <span class="btn-text" 
+                                  data-lang-de="Übungen anzeigen" 
+                                  data-lang-en="View exercises"
+                                  data-lang-ar="عرض التمارين" 
+                                  data-lang-fa="نمایش تمرین‌ها">
+                                Übungen anzeigen
+                            </span>
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="exercises-list" id="exercises-course-2">
+                        <!-- Exercise items -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">2.1</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Ich und meine Werte" 
+                                      data-lang-en="Me and my Values">
+                                    Ich und meine Werte
+                                </span>
+                            </div>
+                            <a href="courses/werte-identitaet/ich-und-meine-werte/index.html" class="start-btn" style="background-color: #F18F01;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <!-- Exercise 2.2: Ich und meine Identität -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">2.2</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Ich und meine Identität" 
+                                      data-lang-en="Me and my Identity"
+                                      data-lang-ar="أنا وهويتي"
+                                      data-lang-fa="من و هویت من">
+                                    Ich und meine Identität
+                                </span>
+                            </div>
+                            <a href="courses/werte-identitaet/ich-und-meine-identitaet/index.html" class="start-btn" style="background-color: #F18F01;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: Exclusion -->
+                <div class="course-container">
+                    <div class="course-header" data-course-id="3" style="background-color: #E63946;">
+                        <div class="course-title-container">
+                            <span class="course-icon">⚖️</span>
+                            <h3 class="course-title" 
+                                data-lang-de="Ausgrenzung" 
+                                data-lang-en="Exclusion"
+                                data-lang-ar="الإقصاء" 
+                                data-lang-fa="محرومیت">
+                                Ausgrenzung
+                            </h3>
+                        </div>
+                        <button class="toggle-btn" data-course-id="3">
+                            <span class="btn-text" 
+                                  data-lang-de="Übungen anzeigen" 
+                                  data-lang-en="View exercises"
+                                  data-lang-ar="عرض التمارين" 
+                                  data-lang-fa="نمایش تمرین‌ها">
+                                Übungen anzeigen
+                            </span>
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="exercises-list" id="exercises-course-3">
+                        <!-- Exercise items -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">3.1</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Vorurteile" 
+                                      data-lang-en="Prejudices"
+                                      data-lang-ar="التحيزات" 
+                                      data-lang-fa="پیش‌داوری‌ها">
+                                    Vorurteile
+                                </span>
+                            </div>
+                            <a href="courses/ausgrenzung/vorurteile/index.html" class="start-btn" style="background-color: #E63946;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <!-- Exercise 3.2: Diskriminierung -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">3.2</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Diskriminierung" 
+                                      data-lang-en="Discrimination"
+                                      data-lang-ar="التمييز" 
+                                      data-lang-fa="تبعیض">
+                                    Diskriminierung
+                                </span>
+                            </div>
+                            <a href="courses/ausgrenzung/diskriminierung/index.html" class="start-btn" style="background-color: #E63946;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <!-- Exercise 3.3: Hilfe bei Rassismuserfahrungen -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">3.3</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Hilfe bei Rassismuserfahrungen" 
+                                      data-lang-en="Help with Racism Experiences"
+                                      data-lang-ar="المساعدة في تجارب العنصرية" 
+                                      data-lang-fa="کمک در تجربیات نژادپرستی">
+                                    Hilfe bei Rassismuserfahrungen
+                                </span>
+                            </div>
+                            <a href="courses/ausgrenzung/rassismuserfahrungen/index.html" class="start-btn" style="background-color: #E63946;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4: Politik und Geschichte -->
+                <div class="course-container">
+                    <div class="course-header" data-course-id="4" style="background-color: #3D5A80;">
+                        <div class="course-title-container">
+                            <span class="course-icon">🏛️</span>
+                            <h3 class="course-title" 
+                                data-lang-de="Politik und Geschichte" 
+                                data-lang-en="Politics and History"
+                                data-lang-ar="السياسة والتاريخ" 
+                                data-lang-fa="سیاست و تاریخ">
+                                Politik und Geschichte
+                            </h3>
+                        </div>
+                        <button class="toggle-btn" data-course-id="4">
+                            <span class="btn-text" 
+                                  data-lang-de="Übungen anzeigen" 
+                                  data-lang-en="View exercises"
+                                  data-lang-ar="عرض التمارين" 
+                                  data-lang-fa="نمایش تمرین‌ها">
+                                Übungen anzeigen
+                            </span>
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="exercises-list" id="exercises-course-4">
+                        <!-- Exercise 4.1: Was ist Demokratie -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">4.1</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Was ist Demokratie" 
+                                      data-lang-en="What is Democracy"
+                                      data-lang-ar="ما هي الديمقراطية" 
+                                      data-lang-fa="دموکراسی چیست">
+                                    Was ist Demokratie
+                                </span>
+                            </div>
+                            <a href="courses/politik-und-geschichte/was-ist-demokratie/index.html" class="start-btn" style="background-color: #3D5A80;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <!-- Exercise 4.2: Demokratie in Deutschland -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">4.2</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Demokratie in Deutschland" 
+                                      data-lang-en="Democracy in Germany"
+                                      data-lang-ar="الديمقراطية في ألمانيا" 
+                                      data-lang-fa="دموکراسی در آلمان">
+                                    Demokratie in Deutschland
+                                </span>
+                            </div>
+                            <a href="courses/politik-und-geschichte/demokratie-in-deutschland/index.html" class="start-btn" style="background-color: #3D5A80;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Exercise 4.3: Parteien in Deutschland -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">4.3</span>
+                                <span class="exercise-title" 
+                                      data-lang-de="Parteien in Deutschland" 
+                                      data-lang-en="Political Parties in Germany"
+                                      data-lang-ar="الأحزاب السياسية في ألمانيا" 
+                                      data-lang-fa="احزاب سیاسی در آلمان">
+                                    Parteien in Deutschland
+                                </span>
+                            </div>
+                            <a href="courses/politik-und-geschichte/parteien-in-deutschland/index.html" class="start-btn" style="background-color: #3D5A80;">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-en="Start exercise"
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                            </a>
+                        </div>
+                        
+                        <!-- Exercise: Parteien in Deutschland -->
+                        <div class="exercise-item">
+                            <a href="courses/politik-und-geschichte/parteien-in-deutschland/index.html" class="exercise-link">
+                                <div class="exercise-info">
+                                    <h4 class="exercise-title">Parteien in Deutschland</h4>
+                                    <p class="exercise-description">Lerne die wichtigsten politischen Parteien in Deutschland kennen.</p>
+                                </div>
+                                <span class="exercise-arrow">→</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Exercise: Geschichte des Holocaust -->
+                        <div class="exercise-item">
+                            <a href="courses/politik-und-geschichte/geschichte-des-holocaust/index.html" class="exercise-link">
+                                <div class="exercise-info">
+                                    <h4 class="exercise-title">Geschichte des Holocaust</h4>
+                                    <p class="exercise-description">Verstehe die historischen Ereignisse des Holocaust und seine Bedeutung für heute.</p>
+                                </div>
+                                <span class="exercise-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5: Opportunities -->
+                <div class="course-container">
+                    <div class="course-header" data-course-id="5" style="background-color: #06D6A0;">
+                        <div class="course-title-container">
+                            <span class="course-icon">🎯</span>
+                            <h3 class="course-title" 
+                                data-lang-de="Chancen" 
+                                data-lang-en="Opportunities"
+                                data-lang-ar="الفرص" 
+                                data-lang-fa="فرصت‌ها">
+                                Chancen
+                            </h3>
+                        </div>
+                        <button class="toggle-btn" data-course-id="5">
+                            <span class="btn-text" 
+                                  data-lang-de="Übungen anzeigen" 
+                                  data-lang-en="View exercises"
+                                  data-lang-ar="عرض التمارين" 
+                                  data-lang-fa="نمایش تمرین‌ها">
+                                Übungen anzeigen
+                            </span>
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="exercises-list" id="exercises-course-5">
+                        <!-- Exercise items -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About AchSo! Section -->
+        <section class="about-section">
+            <div class="about-container">
+                <h2 class="section-title">Kurzüberblick – AchSo!-App und Projekt</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="key-points-table">
+                            <div class="key-point">
+                                <h3>Betreiber</h3>
+                                <p><strong>Drudel 11 e. V.</strong>, eingetragener gemeinnütziger Verein mit Sitz in Jena (Camburger Str. 65).</p>
+                            </div>
+                            <div class="key-point">
+                                <h3>Ziel & Zielgruppe</h3>
+                                <p>Eine <strong>niedrigschwellige, mehrsprachige Lernumgebung</strong> für neu zugewanderte Migrant*innen und Geflüchtete – besonders junge Menschen mit geringen Deutschkenntnissen –, damit sie deutsche Gesellschaftsstrukturen verstehen und selbstbewusst handeln können.</p>
+                            </div>
+                            <div class="key-point">
+                                <h3>Finanzierung</h3>
+                                <p>EU-Asyl-, Migrations- und Integrationsfonds (AMIF) sowie das Thüringer Ministerium für Justiz, Migration und Verbraucherschutz; frühe Projektphase vom Bundesamt für Migration und Flüchtlinge (BAMF) kofinanziert.</p>
+                            </div>
+                            <div class="key-point">
+                                <h3>Produkt</h3>
+                                <p><strong>AchSo!-Mobil-App</strong> (kostenlos, werbefrei, offline nutzbar; Oberfläche auf Deutsch, Arabisch, Persisch, Ukrainisch, demnächst Tigrinya).</p>
+                            </div>
+                            <div class="key-point">
+                                <h3>Didaktisches Konzept</h3>
+                                <p>Gemeinsam mit Fachkräften der Integrationsarbeit und migrierten Jugendlichen entwickelt; Inhalte sind <strong>interaktiv, multimedial und spielerisch</strong>, begleitet vom Maskottchen „Blopp“.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/achso/app-preview.png" alt="AchSo! App Preview" class="app-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/drudel11-logo.png" alt="Drudel11 Logo">
+                </div>
+                <div class="footer-links">
+                    <p>© 2025 Drudel11 e.V. - <a href="#">Impressum</a> - <a href="#">Datenschutz</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

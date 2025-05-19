@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahrnehmung und Wahrheit - AchSo!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- H5P Integration -->
+    <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js"></script>
+</head>
+<body>
+    <header class="exercise-header">
+        <div class="container">
+            <nav class="navigation">
+                <a href="../../../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Zurück zur Übersicht
+                </a>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="exercise-content">
+        <div class="container">
+            <div class="slides-container" id="exercise-slides">
+                <!-- Slide 1 -->
+                <section class="slide" id="slide-1">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h1>Wahrnehmung und Wahrheit</h1>
+                            <p>Hallo! Heute wollen wir verstehen, wie unsere Wahrnehmung funktioniert. Wir können nicht alles gleichzeitig sehen. Unser Gehirn wählt aus, auf was es achtet. Das kommt von unseren Erfahrungen, wie wir aufgewachsen sind und wo wir herkommen.</p>
+                            <p>Das beeinflusst, wie wir die Welt sehen und verstehen.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/Freude_12.html" class="blopp-animation" title="Blopp freut sich"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 2 -->
+                <section class="slide" id="slide-2">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Unser Gehirn nimmt viele Dinge auf einmal wahr. Aber wir können nicht auf alles gleichzeitig achten. Das Gehirn entscheidet, was wichtig ist. Das macht das Gehirn von ganz allein. Wir merken das nicht.</p>
+                            <p>Das heißt <strong>selektive Wahrnehmung</strong>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 3 -->
+                <section class="slide" id="slide-3">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Wahrnehmung ist selektiv</h2>
+                            <p>Ein Video zeigt dir, wie das geht. Dort erlebst du selbst, wie selektive Wahrnehmung funktioniert.</p>
+                            <p>Schau dir das Video an und zähle, wie oft die Bälle in der bunten Fläche auf dem Boden landen.</p>
+                        </div>
+                        <div class="video-container">
+                            <video id="attention-video" controls>
+                                <source src="videos/1.1_Aufmerksamkeit.mp4" type="video/mp4">
+                                Dein Browser unterstützt das Video-Format nicht.
+                            </video>
+                        </div>
+                        <div class="interactive-element">
+                            <div class="multiple-choice-container">
+                                <h3>Und, was ist das Ergebnis?</h3>
+                                <div class="multiple-choice-options">
+                                    <div class="option">
+                                        <input type="radio" id="answer15" name="ball-count" value="15">
+                                        <label for="answer15">15</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="answer22" name="ball-count" value="22">
+                                        <label for="answer22">22</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="answer7" name="ball-count" value="7">
+                                        <label for="answer7">7</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="answer3" name="ball-count" value="3">
+                                        <label for="answer3">3</label>
+                                    </div>
+                                </div>
+                                <button id="check-answer" class="check-btn">Lösung anzeigen</button>
+                                <div id="feedback" class="feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 4 -->
+                <section class="slide" id="slide-4">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Voll gut! Danke, dass du das für mich gezählt hast. Mir fällt es immer so schwer, mich auf die Bälle zu konzentrieren, wenn sich die Form am Boden und die Farben ändern. Hast du das auch bemerkt?</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/fragend3.html" class="blopp-animation" title="Blopp ist fragend"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 5 -->
+                <section class="slide" id="slide-5">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Die Wahrscheinlichkeit ist ziemlich hoch, dass du diese Veränderungen nicht bemerkt hast. Jetzt kannst du noch einmal darauf achten:</p>
+                        </div>
+                        <div class="video-container">
+                            <video id="attention-video-2" controls>
+                                <source src="videos/1.1_Aufmerksamkeit.mp4" type="video/mp4">
+                                Dein Browser unterstützt das Video-Format nicht.
+                            </video>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 6 -->
+                <section class="slide" id="slide-6">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Dieses Video ist ein gutes Beispiel für das Phänomen „<strong>selektive Wahrnehmung</strong>“. Selektive Wahrnehmung bedeutet:</p>
+                            <ul>
+                                <li>Du nimmst nicht alles wahr, was um dich herum passiert.</li>
+                                <li>Dein Gehirn sucht sich bestimmte Dinge aus.</li>
+                                <li>Diese Dinge sind in diesem Moment wichtig.</li>
+                                <li>Alles andere blendet dein Gehirn aus.</li>
+                            </ul>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/1.1_Reizflut.jpg" alt="Reizflut Illustration" class="full-width-image">
+                        </div>
+                        <div class="text-content">
+                            <p>Unsere Welt ist sehr laut und sehr bunt. In jeder Sekunde haben wir so viele Eindrücke gleichzeitig. 1000 Farben, 1000 Gerüche, 1000 Geräusche. Das alles können wir nicht gleichzeitig wahrnehmen und unser Gehirn kann nicht alles verarbeiten.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 7 -->
+                <section class="slide" id="slide-7">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Deine Wahrnehmung hängt von verschiedenen Dingen ab</h2>
+                            <p>Zum Beispiel von dem Ort, an dem du bist.</p>
+                            <p>Aber auch deine Erlebnisse und Erziehung spielen eine Rolle.</p>
+                            <p>Wenn du in einer Umgebung aufgewachsen bist, wo viele Ängste waren, dann siehst du gefährliche Dinge schneller.</p>
+                            <p>Ein weiteres Beispiel ist, wenn du verliebt bist.</p>
+                            <p>Dann trägst du oft eine 'rosarote Brille'.</p>
+                            <p>Das bedeutet, dass du die Welt um dich herum schöner siehst.</p>
+                            <p>Alles erscheint dann positiver.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/Freude_12.html" class="blopp-animation" title="Blopp ist fröhlich"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 8 -->
+                <section class="slide" id="slide-8">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Das passiert, weil dein Gehirn zu viele Informationen auf einmal bekommt und sich nur auf das konzentriert, was für dich gerade wichtig ist.</p>
+                            <p>Ein Beispiel: Wenn du dir neue Schuhe kaufst, siehst du plötzlich überall Leute mit denselben Schuhen. Vorher waren sie auch da, aber du hast sie nicht beachtet.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/erschrocken5.html" class="blopp-animation" title="Blopp ist verwirrend"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 9 -->
+                <section class="slide" id="slide-9">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Unser Gehirn ist wie ein sehr guter Computer.</p>
+                            <p>Aber auch das Gehirn kann nicht alles gleichzeitig machen.</p>
+                            <p>Wir müssen Informationen auswählen.</p>
+                            <p>Das machen wir, ohne dass wir es merken.</p>
+                            <h3>Wir wollen uns jetzt anschauen:</h3>
+                            <ul>
+                                <li>Wie wählen wir Informationen aus?</li>
+                                <li>Warum bemerken wir manche Dinge?</li>
+                                <li>Und warum bemerken wir andere Dinge nicht?</li>
+                            </ul>
+                            <p>Wir wählen durch Aufgaben aus.</p>
+                            <p>Zum Beispiel: Wir sollen zählen, wie oft Bälle in einem bestimmten Bereich landen.</p>
+                            <p>Dann achten wir nur darauf.</p>
+                            <p>Andere Sachen, die passieren, sehen wir nicht.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 10 -->
+                <section class="slide" id="slide-10">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Manchmal sehen wir Dinge nicht so, wie sie wirklich sind.</p>
+                            <p>Das kann zwei Gründe haben:</p>
+                            <h3>1. Optische Täuschungen:</h3>
+                            <ul>
+                                <li>Das sind Effekte, die uns etwas anders sehen lassen, als es ist.</li>
+                                <li>Das liegt an physikalischen Effekten.</li>
+                                <li>Physikalische Effekte sind Wirkungen, die durch Naturgesetze entstehen.</li>
+                            </ul>
+                            <h3>2. Selektive Wahrnehmung:</h3>
+                            <ul>
+                                <li>Das passiert in unserem Kopf.</li>
+                                <li>Es ist abhängig von unseren Erfahrungen, unserer Erziehung und woher wir kommen.</li>
+                                <li>Wir merken oft nicht, dass es passiert.</li>
+                            </ul>
+                            <p>Optische Täuschungen können wir bewusst sehen.</p>
+                            <p>Bei selektiver Wahrnehmung ist das nicht so einfach.</p>
+                            <p>Das passiert meistens, ohne dass wir es bemerken.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 11 -->
+                <section class="slide" id="slide-11">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Ja, das kenne ich! Neulich habe ich Fadi im Kaufhaus verloren. Es waren so viele Menschen überall und ich habe Ausschau nach Fadi gehalten. Dabei habe ich gar nicht bemerkt, dass ich meine Mütze verloren habe. Ich habe mich so sehr darauf konzentriert, Fadi zu finden. Ich habe gar nichts anderes um mich herum mehr bemerkt.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/erschrocken5.html" class="blopp-animation" title="Blopp ist erschrocken"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 12 -->
+                <section class="slide" id="slide-12">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Vorlieben und Erfahrungen</h2>
+                            <p>Vorlieben und Erfahrungen prägen, was uns auffällt. Betrachte das Bild mit den verschiedenen Gegenständen und merke dir in 5 Sekunden so viele Details wie möglich. Los geht's!</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/1.1_Wimmelbild.jpg" alt="Wimmelbild mit verschiedenen Objekten" class="full-width-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 13 -->
+                <section class="slide" id="slide-13">
+                    <div class="slide-content">
+                        <div class="interactive-element">
+                            <div class="hotspot-quiz-container">
+                                <h3>Was hast du dir gemerkt?</h3>
+                                <p>Wähle die Gegenstände, die du im Bild gesehen hast:</p>
+                                <div class="hotspot-options">
+                                    <div class="option-item">
+                                        <input type="checkbox" id="ball" name="remembered-items" value="ball">
+                                        <label for="ball">Ball</label>
+                                        <img src="h5p/file-6183aadb7129a-PXPPe1mO-Pzu87M_R-5NjcpPxy-sFGw2i9G-PbPrSexX.png" alt="Ball" class="item-image" width="80">
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="screen" name="remembered-items" value="screen">
+                                        <label for="screen">Bildschirm</label>
+                                        <img src="h5p/file-6183aafecacc3-gFus8MTD-ZU5OVZ6Z-imPnQncM-C4dHTB19-h8UrT4aG.png" alt="Bildschirm" class="item-image" width="80">
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="diamond" name="remembered-items" value="diamond">
+                                        <label for="diamond">Diamant</label>
+                                        <img src="h5p/file-6183ab07eb9f2-g1t57lUA-9pbtZMEl-avHEu18c-ZAo7lV9n-wTVZPFA7.png" alt="Diamant" class="item-image" width="80">
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="strawberry" name="remembered-items" value="strawberry">
+                                        <label for="strawberry">Erdbeere</label>
+                                        <img src="h5p/file-6183ab127708b-262Xd1c5--iFoVsZb-cEV9KwLi-CB8kVhUy-L7n2UYAu.png" alt="Erdbeere" class="item-image" width="80">
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="fish" name="remembered-items" value="fish">
+                                        <label for="fish">Fische</label>
+                                        <img src="h5p/file-6183ab1d5fec1-A0cup0vJ-uuHVOjN6-bvLR0HAj-HyOfCcKr-pcrF3Tkw.png" alt="Fische" class="item-image" width="80">
+                                    </div>
+                                    <div class="option-item">
+                                        <input type="checkbox" id="carrot" name="remembered-items" value="carrot">
+                                        <label for="carrot">Karotte</label>
+                                        <img src="h5p/file-6183ab2529fa9-JvaoJAj2-N0T2PWbP-WMXyJfME-vSkZ29lC-wwUR8mBU.png" alt="Karotte" class="item-image" width="80">
+                                    </div>
+                                </div>
+                                <button id="check-hotspot" class="check-btn">Fertig</button>
+                                <div id="hotspot-feedback" class="feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 14 -->
+                <section class="slide" id="slide-14">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Krass! Du hast dir ja ganz andere Sachen gemerkt als ich.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/neutral16.html" class="blopp-animation" title="Blopp ist neutral"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 15 -->
+                <section class="slide" id="slide-15">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Tatsächlich ist die Wahrscheinlichkeit sehr hoch, dass jeder sich andere Dinge merkt. Je nachdem, was wir mögen oder nicht mögen, nehmen wir Dinge schneller oder überhaupt wahr. Je nachdem, welche Erfahrungen wir gemacht haben, nehmen wir Dinge schneller oder überhaupt wahr.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 16 -->
+                <section class="slide" id="slide-16">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Ja, das kenne ich. Also diese Mütze, die ich letzte Woche verloren habe, das war meine Lieblingsmütze und die erste, die ich mir jemals gekauft habe. Und sie sah so gut an mir aus. Auf jeden Fall ist sie weg und seitdem gucke ich bei allen Menschen auf ihre Mützen. Es gibt so viele verschiedene Mützen. Das ist mir vorher gar nicht aufgefallen.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/traurig_2.html" class="blopp-animation" title="Blopp ist traurig"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 17 -->
+                <section class="slide" id="slide-17">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Kontext und Perspektive</h2>
+                            <p>'Kontext' bedeutet:</p>
+                            <p>Es gibt Dinge um uns herum. Diese Dinge können sein:</p>
+                            <ul>
+                                <li>Wie wir uns fühlen.</li>
+                                <li>Wo wir sind.</li>
+                                <li>Was wir schon wissen.</li>
+                            </ul>
+                            <p>Diese Dinge beeinflussen, wie wir etwas verstehen.</p>
+                            <p>Schau mal...</p>
+                        </div>
+                        <div class="interactive-element">
+                            <div class="multiple-choice-container">
+                                <img src="h5p/1.1_Blau.png" alt="ABC Bild" class="full-width-image" style="max-width:300px; margin-bottom: 20px;">
+                                <h3>Was siehst du in der Mitte?</h3>
+                                <div class="multiple-choice-options">
+                                    <div class="option">
+                                        <input type="radio" id="number13" name="perception" value="13">
+                                        <label for="number13">13</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="letterB" name="perception" value="B">
+                                        <label for="letterB">B</label>
+                                    </div>
+                                </div>
+                                <button id="check-perception" class="check-btn">Lösung anzeigen</button>
+                                <div id="perception-feedback" class="feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 18 -->
+                <section class="slide" id="slide-18">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Tatsächlich ist natürlich beides richtig. Ob wir eine 13 oder ein B sehen, hängt vom Kontext ab. Das Beispiel ist natürlich ein bisschen abstrakt. Aber ganz genau so funktioniert das oft im Leben.</p>
+                            <p>Kontext kann zum Beispiel auch bedeuten, wie wir uns gerade fühlen oder wie die Stimmung ist. Den gleichen Satz können wir sehr unterschiedlich wahrnehmen.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/erschrocken5.html" class="blopp-animation" title="Blopp ist verwirrend"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 19 -->
+                <section class="slide" id="slide-19">
+                    <div class="slide-content">
+                        <div class="interactive-element">
+                            <div class="multiple-choice-container">
+                                <img src="h5p/1.1_Blau.png" alt="Blaue Kreise" class="full-width-image" style="max-width:300px; margin-bottom: 20px;">
+                                <h3>Sieh dir die blauen Kreise an.</h3>
+                                <h4>Welcher Kreis ist größer?</h4>
+                                <div class="multiple-choice-options">
+                                    <div class="option">
+                                        <input type="radio" id="left-circle" name="circle-size" value="left">
+                                        <label for="left-circle">links</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="right-circle" name="circle-size" value="right">
+                                        <label for="right-circle">rechts</label>
+                                    </div>
+                                </div>
+                                <button id="check-circles" class="check-btn">Lösung anzeigen</button>
+                                <div id="circles-feedback" class="feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 20 -->
+                <section class="slide" id="slide-20">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Tatsächlich sind beide Kreise gleich groß. Aber die roten Kreise sind verschieden groß und anders positioniert. Man vergleicht den blauen Kreis mit den roten Kreisen. Der Kontext verändert, wie wir Dinge wahrnehmen.</p>
+                            <p>Kontext bedeutet die Umstände, die gerade sind.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 21 -->
+                <section class="slide" id="slide-21">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Denke mal darüber nach:</p>
+                            <p>Es ist ein sehr heißer Sommer-Tag.</p>
+                            <p>Es ist Mittag und die Sonne scheint stark.</p>
+                            <p>Wenn es jetzt 18 Grad sind, fühlt es sich kühl an. Aber 18 Grad im Winter ist das beste Wetter zum Grillen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 22 -->
+                <section class="slide" id="slide-22">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Unsere Wahrnehmung hängt davon ab, wie unsere Umgebung ist, wie wir uns fühlen, was wir sonst noch sehen oder mit was wir etwas vergleichen.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/1.1_69.jpg" alt="69 Perspektive" class="full-width-image">
+                        </div>
+                        <div class="text-content">
+                            <p>Außerdem hat Perspektive einen großen Einfluss darauf, wie wir Dinge wahrnehmen. Perspektive bedeutet, von wo wir auf eine Sache schauen. Ein Baum kann sehr groß sein, wenn wir direkt davorstehen. Aus dem Flugzeug sieht er aber sehr klein aus. Außerdem ist entscheidend, aus welcher Richtung wir etwas sehen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 23 -->
+                <section class="slide" id="slide-23">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Auch bei diesem Bild gibt es keine richtige und keine falsche Antwort. Die Zahl ist eine 6. Die Zahl ist eine 9. Es hängt alleine davon ab, von wo wir auf die Zahl gucken. Beide Personen haben Recht. Und trotzdem streiten sie sich -- nur weil sie eine andere Perspektive auf die Zahl haben.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/neutral16.html" class="blopp-animation" title="Blopp ist neutral"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 24 -->
+                <section class="slide" id="slide-24">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Unsere Erfahrungen und Gefühle und manchmal auch der Kontext sind sehr persönlich. Es gibt aber noch etwas, das haben wir alle gemeinsam. Manchmal spielt unser Gehirn uns einen Streich. Manche Dinge können wir gar nicht so wahrnehmen, wie sie sind. Weil unser Gehirn das überhaupt gar nicht kann.</p>
+                        </div>
+                        <div class="interactive-element">
+                            <div class="slider-container">
+                                <h3>Optische Täuschung: Grauer Balken</h3>
+                                <div class="illusion-container">
+                                    <div class="optical-illusion-box">
+                                        <div class="gradient-background"></div>
+                                        <div class="gray-bar"></div>
+                                        <div class="overlay-mask" id="illusion-mask"></div>
+                                    </div>
+                                    <div class="slider-control">
+                                        <input type="range" id="illusion-slider" min="0" max="100" value="0" class="slider">
+                                    </div>
+                                    <p class="slider-instruction">Bewege den Schieberegler, um die optische Täuschung zu sehen.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 25 -->
+                <section class="slide" id="slide-25">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Oh!!! Optische Täuschungen! Also ich hätte nicht gedacht, dass der Balken einfach nur grau ist. Mein Gehirn kann das auch nicht umsetzen. Wir können gar nicht sehen, dass der Balken grau ist. Erst, wenn wir den Hintergrund wegschieben.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/erschrocken5.html" class="blopp-animation" title="Blopp ist überrascht"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 26 -->
+                <section class="slide" id="slide-26">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Sage laut der Farben, die du hier siehst, <strong>nicht</strong> das geschriebene Wort Also: Rot, gelb, grün...</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/1.1_Farbworte.png" alt="Farbworte" class="full-width-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 27 -->
+                <section class="slide" id="slide-27">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Wahrscheinlich ist dir das ziemlich schwergefallen und du warst eher langsam -- so wie die allermeisten Menschen. Wir haben gelernt, dass unser Gehirn filtern muss, weil es sonst immer überfordert wäre. Das hier ist so ein Moment. Es passieren zwei Dinge gleichzeitig in unserem Gehirn: Wir lesen Worte und sehen Farben. Beides kann unser Gehirn nicht zusammenkriegen. Wir sind überfordert und verwirrt.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 28 -->
+                <section class="slide" id="slide-28">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Ganz schön kompliziert, diese Sache mit der Wahrnehmung.</p>
+                            <p>Die Funktionsweise unseres Gehirns, unsere Perspektive, der Kontext, unsere Erfahrungen und Vorlieben... Alles verschiebt unsere Wahrnehmung. Unsere Sinne helfen uns, die Welt zu verstehen.</p>
+                            <p>Aber auch unsere Sprache ist wichtig dafür.</p>
+                            <p>Nicht nur das, was wir sehen, hat Einfluss auf uns.</p>
+                            <p>Auch wie wir sprechen und welche Wörter wir benutzen, formt unser Denken.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/neutral16.html" class="blopp-animation" title="Blopp ist neutral"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 29 -->
+                <section class="slide" id="slide-29">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Sprache und Wahrnehmung</h2>
+                            <p>Wusstest du, dass die Herkunftssprache beeinflusst, wie wir die Welt sehen?</p>
+                            <p>Manche Sprachen haben spezielle Wörter für Dinge.</p>
+                            <p>Andere Sprachen brauchen mehr Worte, um dasselbe zu beschreiben. Menschen, die mehrere Sprachen sprechen, können oft besser zwischen verschiedenen Ideen wechseln.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/1.1_Blau.png" alt="Verschiedene Blautöne" class="full-width-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 30 -->
+                <section class="slide" id="slide-30">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Sprache ist sehr wichtig. Sie bestimmt, wie wir Dinge sehen und verstehen. Forscher untersuchen noch, wie genau das funktioniert.</p>
+                            <p>Manchmal gibt es Wörter in einer Sprache, die man nicht genau gleich in eine andere Sprache übersetzen kann.</p>
+                            <p>Jede Sprache hat besondere Wörter und Ausdrücke. Diese besonderen Wörter und Ausdrücke zeigen etwas über die Kultur der Menschen. Das macht jede Sprache besonders.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/ernst2.html" class="blopp-animation" title="Blopp ist ernst"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 31 -->
+                <section class="slide" id="slide-31">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Wissenschaftler haben herausgefunden:</h2>
+                            <p>Unsere Sprache beeinflusst, wie wir die Welt sehen.</p>
+                            <p>Manche Wörter gibt es nur in einer Sprache.</p>
+                            <p>Sie können nicht direkt in eine andere Sprache übersetzt werden.</p>
+                            <p>Aber:</p>
+                            <p>Viele verschiedene Sprachen zu haben, hilft uns. So können wir die Welt besser verstehen. Jede Sprache zeigt uns etwas Anderes von der Welt.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 32 -->
+                <section class="slide" id="slide-32">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Ja, Edris fühlt sich in seiner Muttersprache lustiger. Auf Deutsch fühlt er sich manchmal langweilig. Das geht vielen Menschen so, die mehrere Sprachen sprechen. Forscher haben das untersucht.</p>
+                            <p>Sie haben herausgefunden:</p>
+                            <p>Wenn man eine andere Sprache spricht, verhält man sich auch anders.</p>
+                            <p>Es ist fast so, als hätte man für jede Sprache eine andere Persönlichkeit.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 33 -->
+                <section class="slide" id="slide-33">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Ich sehe was, das du nicht siehst...</h2>
+                            <p>Vielleicht fragst du dich jetzt: Was ist wahr an Wahrnehmung?</p>
+                            <p>Das Wort Wahrnehmung bedeutet nicht Wahrheit. Es geht um etwas anderes. Wahrnehmung ist, wie wir die Welt erleben. Wie wir die Dinge um uns herum sehen. Jeder Mensch sieht die Welt auf seine eigene Art. Das ist wichtig zu verstehen. Jeder hat seine eigene Wahrheit.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/fragend3.html" class="blopp-animation" title="Blopp ist fragend"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 34 -->
+                <section class="slide" id="slide-34">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Meine Welt ist also nicht deine Welt. Fadis Welt ist nicht Pauls Welt. Natürlich gibt es Fakten. Es gibt Naturwissenschaften. Es gibt physikalische Gesetze. Aber so, wie man die Welt wahrnimmt, so wie man glaubt, dass sie ist -- das ist sehr individuell, also von Mensch zu Mensch unterschiedlich.</p>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/neutral16.html" class="blopp-animation" title="Blopp ist neutral"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 35 -->
+                <section class="slide" id="slide-35">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Eine Vase oder zwei Gesichter</h2>
+                            <p>Egal, was du zuerst siehst, es ist richtig. Wenn du weder Gesichter noch eine Vase siehst, ist das auch richtig. Deine Realität ist das, was du siehst. Deine Sicht auf die Dinge ist einzigartig. Das bedeutet, jeder Mensch sieht die Welt auf seine eigene Art.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/1.1_VaseGesicht.jpg" alt="Vase oder Gesichter Illusion" class="full-width-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 36 -->
+                <section class="slide" id="slide-36">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <p>Weil wir Dinge so anders sehen, ist es umso wichtiger, dass wir miteinander sprechen. Ich weiß nicht, wie die Welt durch deine Augen aussieht. Du weißt nicht, wie die Welt durch meine Augen aussieht. Deswegen müssen wir kommunizieren.</p>
+                            <p>Super, du hast die Übung abgeschlossen! 🎉</p>
+                            <div class="summary-box">
+                                <h3>In dieser Übung hast du gelernt:</h3>
+                                <ul>
+                                    <li>Unsere Wahrnehmung wird durch persönliche Erfahrungen, Fokus und kulturellen Hintergrund beeinflusst</li>
+                                    <li>Optische Täuschungen zeigen, dass wir die Welt nicht immer so sehen, wie sie wirklich ist</li>
+                                    <li>Sprache formt, wie wir die Welt verstehen und beschreiben</li>
+                                    <li>Jeder Mensch hat seine eigene Sicht der Wirklichkeit</li>
+                                </ul>
+                            </div>
+                            <div class="cta-container">
+                                <a href="../../../index.html" class="cta-button">Zurück zur Kursübersicht</a>
+                            </div>
+                        </div>
+                        <div class="character">
+                            <iframe src="../../../images/Blopp/superhappy1.html" class="blopp-animation" title="Blopp ist sehr glücklich"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation buttons -->
+                <div class="slide-navigation">
+                    <button class="nav-btn prev-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Zurück
+                    </button>
+                    <button class="nav-btn next-btn">
+                        Weiter
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

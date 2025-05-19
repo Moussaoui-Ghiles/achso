@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parteien in Deutschland | AchSo!</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="theme-democracy">
+    <header class="exercise-header" style="background-color: #3D5A80;">
+        <div class="container">
+            <nav class="navigation">
+                <a href="../../../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-de="Zurück zur Übersicht" 
+                          data-lang-en="Back to overview"
+                          data-lang-ar="العودة إلى نظرة عامة" 
+                          data-lang-fa="بازگشت به نمای کلی">
+                        Zurück zur Übersicht
+                    </span>
+                </a>
+                <div class="progress-info">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-bar"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">0%</span>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn active" data-lang="de">DE</button>
+                    <button class="language-btn" data-lang="en">EN</button>
+                    <button class="language-btn" data-lang="ar">AR</button>
+                    <button class="language-btn" data-lang="fa">FA</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="exercise-content">
+        <div class="container">
+            <div class="exercise-title-section">
+                <h1 class="exercise-title" 
+                    data-lang-de="Parteien in Deutschland" 
+                    data-lang-en="Political Parties in Germany"
+                    data-lang-ar="الأحزاب السياسية في ألمانيا" 
+                    data-lang-fa="احزاب سیاسی در آلمان">
+                    Parteien in Deutschland
+                </h1>
+            </div>
+            <div class="slides-container">
+            <!-- Slide 1: Introduction -->
+            <div class="slide active" id="slide-1">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Parteien in Deutschland" 
+                            data-lang-en="Political Parties in Germany"
+                            data-lang-ar="الأحزاب السياسية في ألمانيا" 
+                            data-lang-fa="احزاب سیاسی در آلمان">
+                            Parteien in Deutschland
+                        </h2>
+                        <p data-lang-de="In dieser Station stellen wir die verschiedenen Parteien in Deutschland vor."
+                           data-lang-en="In this section, we introduce the various political parties in Germany."
+                           data-lang-ar="في هذا القسم، نقدم الأحزاب السياسية المختلفة في ألمانيا."
+                           data-lang-fa="در این بخش، احزاب سیاسی مختلف در آلمان را معرفی می‌کنیم.">
+                            In dieser Station stellen wir die verschiedenen Parteien in Deutschland vor.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/4.3_Blopp_Parteien.mp4" type="video/mp4">
+                                Dein Browser unterstützt das Video-Element nicht.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Democracy in Germany -->
+            <div class="slide" id="slide-2">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Lebendige Demokratie" 
+                            data-lang-en="Living Democracy"
+                            data-lang-ar="الديمقراطية الحية" 
+                            data-lang-fa="دموکراسی زنده">
+                            Lebendige Demokratie
+                        </h2>
+                        <p data-lang-de="Deutschland ist eine lebendige Demokratie. In den Nachrichten hörst du immer wieder von verschiedenen Parteien. In den regelmäßigen Wahlen bestimmen die Wahlberechtigten, wer ihrer Meinung nach regieren soll."
+                           data-lang-en="Germany is a vibrant democracy. In the news, you frequently hear about various parties. In regular elections, eligible voters determine who they think should govern."
+                           data-lang-ar="ألمانيا هي ديمقراطية نابضة بالحياة. في الأخبار، تسمع بشكل متكرر عن مختلف الأحزاب. في الانتخابات المنتظمة، يحدد الناخبون المؤهلون من يعتقدون أنه يجب أن يحكم."
+                           data-lang-fa="آلمان یک دموکراسی پرجنب‌وجوش است. در اخبار، مرتباً درباره احزاب مختلف می‌شنوید. در انتخابات منظم، رأی‌دهندگان واجد شرایط تعیین می‌کنند که چه کسی باید حکومت کند.">
+                            Deutschland ist eine lebendige Demokratie. In den Nachrichten hörst du immer wieder von verschiedenen Parteien. In den regelmäßigen Wahlen bestimmen die Wahlberechtigten, wer ihrer Meinung nach regieren soll.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/4.3_Blopp_Wählen.mp4" type="video/mp4">
+                                Dein Browser unterstützt das Video-Element nicht.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Who can vote -->
+            <div class="slide" id="slide-3">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Wahlberechtigung" 
+                            data-lang-en="Voting Eligibility"
+                            data-lang-ar="أهلية التصويت" 
+                            data-lang-fa="شرایط رأی دادن">
+                            Wahlberechtigung
+                        </h2>
+                        <p data-lang-de="Wahlberechtigt heißen diejenigen, die wählen dürfen. Wer wählen darf unterscheidet sich ein bisschen von Wahl zu Wahl. Und in Deutschland wählen wir viele Dinge. Es gibt Kommunalwahlen, Landtagswahlen, Bundestagswahlen und Europawahlen."
+                           data-lang-en="'Eligible to vote' refers to those who are allowed to vote. Who can vote differs slightly from election to election. And in Germany, we vote for many things. There are local elections, state parliament elections, federal parliament elections, and European elections."
+                           data-lang-ar="'مؤهل للتصويت' يشير إلى أولئك الذين يسمح لهم بالتصويت. من يستطيع التصويت يختلف قليلاً من انتخابات إلى أخرى. وفي ألمانيا، نصوت لأشياء كثيرة. هناك انتخابات محلية، وانتخابات برلمان الولاية، وانتخابات البرلمان الاتحادي، والانتخابات الأوروبية."
+                           data-lang-fa="'واجد شرایط رأی' به کسانی گفته می‌شود که می‌توانند رأی دهند. اینکه چه کسی می‌تواند رأی دهد از انتخاباتی به انتخابات دیگر کمی متفاوت است. و در آلمان، ما برای موارد زیادی رأی می‌دهیم. انتخابات محلی، انتخابات پارلمان ایالتی، انتخابات پارلمان فدرال و انتخابات اروپایی وجود دارد.">
+                            Wahlberechtigt heißen diejenigen, die wählen dürfen. Wer wählen darf unterscheidet sich ein bisschen von Wahl zu Wahl. Und in Deutschland wählen wir viele Dinge. Es gibt Kommunalwahlen, Landtagswahlen, Bundestagswahlen und Europawahlen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Types of elections -->
+            <div class="slide" id="slide-4">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Arten von Wahlen" 
+                            data-lang-en="Types of Elections"
+                            data-lang-ar="أنواع الانتخابات" 
+                            data-lang-fa="انواع انتخابات">
+                            Arten von Wahlen
+                        </h2>
+                        <p data-lang-de="Kommunalwahlen sind die Wahlen in deiner Stadt oder deinem Dorf. Landtag ist das Parlament deines Bundeslandes. Bundestag das Parlament von Deutschland. Außerdem gibt es noch ein Europaparlament."
+                           data-lang-en="Local elections are the elections in your city or village. The state parliament is the parliament of your federal state. The Bundestag is the parliament of Germany. In addition, there is also a European Parliament."
+                           data-lang-ar="الانتخابات المحلية هي الانتخابات في مدينتك أو قريتك. برلمان الولاية هو برلمان ولايتك الاتحادية. البوندستاغ هو برلمان ألمانيا. بالإضافة إلى ذلك، هناك أيضًا برلمان أوروبي."
+                           data-lang-fa="انتخابات محلی، انتخابات در شهر یا روستای شما هستند. پارلمان ایالتی، پارلمان ایالت فدرال شماست. بوندستاگ، پارلمان آلمان است. علاوه بر این، یک پارلمان اروپایی نیز وجود دارد.">
+                            Kommunalwahlen sind die Wahlen in deiner Stadt oder deinem Dorf. Landtag ist das Parlament deines Bundeslandes. Bundestag das Parlament von Deutschland. Außerdem gibt es noch ein Europaparlament.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <div class="gif-container">
+                            <img src="images/4.3_Karten.gif" alt="Karten der Wahlebenen" class="full-width-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 5: Age requirements -->
+            <div class="slide" id="slide-5">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Wahlalter" 
+                            data-lang-en="Voting Age"
+                            data-lang-ar="سن التصويت" 
+                            data-lang-fa="سن رأی دادن">
+                            Wahlalter
+                        </h2>
+                        <p data-lang-de="Doch für die jeweiligen Wahlen gibt es unterschiedliche Voraussetzungen, um als Bürger oder Bürgerin wahlberechtigt zu sein. Manche Bundesländer machen jedoch für die Kommunal- und Landtagswahl eine Ausnahme, in diesen Fällen darf schon ab 16 Jahren gewählt werden."
+                           data-lang-en="But for the respective elections, there are different requirements to be eligible to vote as a citizen. However, some federal states make an exception for local and state parliament elections, in these cases voting is already allowed from the age of 16."
+                           data-lang-ar="ولكن بالنسبة للانتخابات المعنية، هناك متطلبات مختلفة للتأهل للتصويت كمواطن. ومع ذلك، تستثني بعض الولايات الاتحادية انتخابات المجالس المحلية والبرلمانات الولائية، وفي هذه الحالات يُسمح بالتصويت بالفعل من سن 16."
+                           data-lang-fa="اما برای انتخابات مربوطه، شرایط مختلفی برای واجد شرایط بودن رأی به عنوان شهروند وجود دارد. با این حال، برخی ایالت‌های فدرال برای انتخابات محلی و پارلمان ایالتی استثنا قائل می‌شوند، در این موارد رأی دادن از سن ۱۶ سالگی مجاز است.">
+                            Doch für die jeweiligen Wahlen gibt es unterschiedliche Voraussetzungen, um als Bürger oder Bürgerin wahlberechtigt zu sein. Manche Bundesländer machen jedoch für die Kommunal- und Landtagswahl eine Ausnahme, in diesen Fällen darf schon ab 16 Jahren gewählt werden.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 6: Requirements for voting -->
+            <div class="slide" id="slide-6">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Voraussetzungen zum Wählen" 
+                            data-lang-en="Requirements for Voting"
+                            data-lang-ar="متطلبات التصويت" 
+                            data-lang-fa="شرایط رأی دادن">
+                            Voraussetzungen zum Wählen
+                        </h2>
+                        <p data-lang-de="Um bei einer Kommunalwahl zu wählen, musst du deinen Wohnsitz in der jeweiligen Kommune haben und ein EU-Bürger sein. Um bei der Landtagswahl wählen zu können, muss man in dem jeweiligen Bundesland leben und die deutsche Staatsbürgerschaft besitzen. Für die Bundestagswahl muss man 18 Jahre alt, ein deutscher Staatsbürger sein und seit mindestens 3 Monaten vor der Wahl einen Wohnsitz in Deutschland haben, um wahlberechtigt zu sein."
+                           data-lang-en="To vote in a local election, you must have your residence in the respective municipality and be an EU citizen. To be able to vote in the state parliament election, you must live in the respective federal state and possess German citizenship. For the federal parliament election, you must be 18 years old, be a German citizen, and have had a residence in Germany for at least 3 months before the election to be eligible to vote."
+                           data-lang-ar="للتصويت في انتخابات محلية، يجب أن يكون لديك إقامة في البلدية المعنية وأن تكون مواطنًا في الاتحاد الأوروبي. لتتمكن من التصويت في انتخابات برلمان الولاية، يجب أن تعيش في الولاية الاتحادية المعنية وتمتلك الجنسية الألمانية. بالنسبة لانتخابات البرلمان الاتحادي، يجب أن يكون عمرك 18 عامًا، وأن تكون مواطنًا ألمانيًا، وأن يكون لديك إقامة في ألمانيا لمدة 3 أشهر على الأقل قبل الانتخابات لتكون مؤهلاً للتصويت."
+                           data-lang-fa="برای رأی دادن در انتخابات محلی، باید محل سکونت خود را در شهرداری مربوطه داشته باشید و شهروند اتحادیه اروپا باشید. برای رأی دادن در انتخابات پارلمان ایالتی، باید در ایالت فدرال مربوطه زندگی کنید و دارای تابعیت آلمان باشید. برای انتخابات پارلمان فدرال، شما باید 18 ساله باشید، شهروند آلمان باشید و حداقل 3 ماه قبل از انتخابات در آلمان سکونت داشته باشید تا واجد شرایط رأی دادن باشید.">
+                            Um bei einer Kommunalwahl zu wählen, musst du deinen Wohnsitz in der jeweiligen Kommune haben und ein EU-Bürger sein. Um bei der Landtagswahl wählen zu können, muss man in dem jeweiligen Bundesland leben und die deutsche Staatsbürgerschaft besitzen. Für die Bundestagswahl muss man 18 Jahre alt, ein deutscher Staatsbürger sein und seit mindestens 3 Monaten vor der Wahl einen Wohnsitz in Deutschland haben, um wahlberechtigt zu sein.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 7: Many parties -->
+            <div class="slide" id="slide-7">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Viele Parteien" 
+                            data-lang-en="Many Parties"
+                            data-lang-ar="العديد من الأحزاب" 
+                            data-lang-fa="احزاب متعدد">
+                            Viele Parteien
+                        </h2>
+                        <p data-lang-de="Wir haben nicht nur viele Wahlen, sondern auch viele Parteien. Deswegen sind die Wahlzettel meistens ziemlich lang. Sie sehen für jede Wahl, in jedem Bundesland oder jeder Stadt ein bisschen anders aus."
+                           data-lang-en="We not only have many elections, but also many parties. That's why the ballots are usually quite long. They look a little different for each election, in each federal state or each city."
+                           data-lang-ar="لدينا ليس فقط العديد من الانتخابات، ولكن أيضًا العديد من الأحزاب. لهذا السبب عادة ما تكون أوراق الاقتراع طويلة جدًا. تبدو مختلفة قليلاً لكل انتخابات، في كل ولاية اتحادية أو كل مدينة."
+                           data-lang-fa="ما نه تنها انتخابات متعددی داریم، بلکه احزاب زیادی نیز داریم. به همین دلیل برگه‌های رأی معمولاً نسبتاً طولانی هستند. آنها برای هر انتخابات، در هر ایالت فدرال یا هر شهر کمی متفاوت به نظر می‌رسند.">
+                            Wir haben nicht nur viele Wahlen, sondern auch viele Parteien. Deswegen sind die Wahlzettel meistens ziemlich lang. Sie sehen für jede Wahl, in jedem Bundesland oder jeder Stadt ein bisschen anders aus.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <div class="gif-container">
+                            <img src="images/4.3_Wahlzettel.gif" alt="Wahlzettel Beispiel" class="full-width-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 8: Long ballot -->
+            <div class="slide" id="slide-8">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Langer Wahlzettel" 
+                            data-lang-en="Long Ballot"
+                            data-lang-ar="ورقة اقتراع طويلة" 
+                            data-lang-fa="برگه رأی طولانی">
+                            Langer Wahlzettel
+                        </h2>
+                        <p data-lang-de="Oh, warum ist der Wahlzettel so lang?"
+                           data-lang-en="Oh, why is the ballot so long?"
+                           data-lang-ar="أوه، لماذا ورقة الاقتراع طويلة جدًا؟"
+                           data-lang-fa="اوه، چرا برگه رأی این قدر طولانی است؟">
+                            Oh, warum ist der Wahlzettel so lang?
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/4.3_Blopp_Wahlzettel.mp4" type="video/mp4">
+                                Dein Browser unterstützt das Video-Element nicht.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 9: Federal election -->
+            <div class="slide" id="slide-9">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Bundestagswahl" 
+                            data-lang-en="Federal Election"
+                            data-lang-ar="الانتخابات الاتحادية" 
+                            data-lang-fa="انتخابات فدرال">
+                            Bundestagswahl
+                        </h2>
+                        <p data-lang-de="Zum Beispiel in Bundestagswahl ist es so:
+
+Jeder Wähler hat zwei Stimmen
+
+Erststimme → Wahl eines Direktkandidaten im Wahlkreis (Mehrheitswahl)
+
+Zweitstimme → Wahl einer Partei (Verhältniswahl)
+
+Die Zweitstimme ist entscheidend, weil sie bestimmt, wie viele Sitze eine Partei insgesamt im Bundestag bekommt."
+                           data-lang-en="For example, in the federal election it works like this:
+
+Each voter has two votes
+
+First vote → Election of a direct candidate in the constituency (majority vote)
+
+Second vote → Election of a party (proportional representation)
+
+The second vote is decisive because it determines how many seats a party gets in total in the Bundestag."
+                           data-lang-ar="على سبيل المثال، في الانتخابات الاتحادية تعمل على النحو التالي:
+
+لكل ناخب صوتان
+
+الصوت الأول → انتخاب مرشح مباشر في الدائرة الانتخابية (تصويت الأغلبية)
+
+الصوت الثاني → انتخاب حزب (تمثيل نسبي)
+
+الصوت الثاني حاسم لأنه يحدد عدد المقاعد التي يحصل عليها الحزب في المجموع في البوندستاغ."
+                           data-lang-fa="به عنوان مثال، در انتخابات فدرال به این شکل کار می‌کند:
+
+هر رأی‌دهنده دو رأی دارد
+
+رأی اول → انتخاب یک نامزد مستقیم در حوزه انتخاباتی (رأی اکثریت)
+
+رأی دوم → انتخاب یک حزب (نمایندگی تناسبی)
+
+رأی دوم تعیین‌کننده است زیرا مشخص می‌کند که یک حزب در مجموع چند کرسی در بوندستاگ دریافت می‌کند.">
+                            Zum Beispiel in Bundestagswahl ist es so:
+
+Jeder Wähler hat zwei Stimmen
+
+Erststimme → Wahl eines Direktkandidaten im Wahlkreis (Mehrheitswahl)
+
+Zweitstimme → Wahl einer Partei (Verhältniswahl)
+
+Die Zweitstimme ist entscheidend, weil sie bestimmt, wie viele Sitze eine Partei insgesamt im Bundestag bekommt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 10: Bundestag structure -->
+            <div class="slide" id="slide-10">
+                <div class="slide-content">
+                    <div class="text-content">
+                        <h2 class="slide-title" 
+                            data-lang-de="Struktur des Bundestags" 
+                            data-lang-en="Structure of the Bundestag"
+                            data-lang-ar="هيكل البوندستاغ" 
+                            data-lang-fa="ساختار بوندستاگ">
+                            Struktur des Bundestags
+                        </h2>
+                        <p data-lang-de="Der Bundestag hat mindestens 598 Sitze, kann aber durch Überhang- und Ausgleichsmandate größer werden.
+
+Direktmandate (Erststimme) → 299 Abgeordnete werden direkt gewählt.
+
+Listenmandate (Zweitstimme) → Weitere Sitze werden nach dem Verhältnis der Zweitstimmen auf Parteien verteilt.
+
+Die 5-%-Hürde gilt: Nur Parteien mit mindestens 5 % der Zweitstimmen oder 3 Direktmandaten ziehen ins Parlament ein.
+
+Deswegen bekommen kleine Parteien oft Stimmen und sind trotzdem nicht im Parlament."
+                           data-lang-en="The Bundestag has at least 598 seats, but can become larger through overhang and equalizing mandates.
+
+Direct mandates (first vote) → 299 members are directly elected.
+
+List mandates (second vote) → Additional seats are distributed to parties according to the proportion of second votes.
+
+The 5% threshold applies: Only parties with at least 5% of the second votes or 3 direct mandates enter the parliament.
+
+That's why small parties often get votes and are still not in parliament."
+                           data-lang-ar="يضم البوندستاغ 598 مقعدًا على الأقل، ولكن يمكن أن يصبح أكبر من خلال التفويضات الزائدة والمعادلة.
+
+التفويضات المباشرة (الصوت الأول) → يتم انتخاب 299 عضوًا بشكل مباشر.
+
+تفويضات القائمة (الصوت الثاني) → يتم توزيع المقاعد الإضافية على الأحزاب وفقًا لنسبة الأصوات الثانية.
+
+ينطبق حد الـ 5٪: تدخل فقط الأحزاب التي حصلت على 5٪ على الأقل من الأصوات الثانية أو 3 تفويضات مباشرة إلى البرلمان.
+
+لهذا السبب غالبًا ما تحصل الأحزاب الصغيرة على أصوات ولا تزال غير موجودة في البرلمان."
+                           data-lang-fa="بوندستاگ حداقل 598 کرسی دارد، اما می‌تواند از طریق مأموریت‌های اضافی و متعادل‌کننده بزرگ‌تر شود.
+
+مأموریت‌های مستقیم (رأی اول) → 299 عضو به طور مستقیم انتخاب می‌شوند.
+
+مأموریت‌های فهرست (رأی دوم) → کرسی‌های اضافی بر اساس نسبت آرای دوم به احزاب توزیع می‌شوند.
+
+آستانه 5 درصد اعمال می‌شود: فقط احزابی با حداقل 5 درصد از آرای دوم یا 3 مأموریت مستقیم وارد پارلمان می‌شوند.
+
+به همین دلیل احزاب کوچک اغلب رأی می‌آورند اما همچنان در پارلمان نیستند.">
+                            Der Bundestag hat mindestens 598 Sitze, kann aber durch Überhang- und Ausgleichsmandate größer werden.
+
+Direktmandate (Erststimme) → 299 Abgeordnete werden direkt gewählt.
+
+Listenmandate (Zweitstimme) → Weitere Sitze werden nach dem Verhältnis der Zweitstimmen auf Parteien verteilt.
+
+Die 5-%-Hürde gilt: Nur Parteien mit mindestens 5 % der Zweitstimmen oder 3 Direktmandaten ziehen ins Parlament ein.
+
+Deswegen bekommen kleine Parteien oft Stimmen und sind trotzdem nicht im Parlament.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <div class="gif-container">
+                            <img src="images/4.3_Hürde.gif" alt="5-Prozent-Hürde" class="full-width-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-btn prev-btn" id="prev-btn" disabled>
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang-de="Zurück" data-lang-en="Back" data-lang-ar="رجوع" data-lang-fa="بازگشت">Zurück</span>
+                </button>
+                <button class="nav-btn next-btn" id="next-btn">
+                    <span data-lang-de="Weiter" data-lang-en="Next" data-lang-ar="التالي" data-lang-fa="بعدی">Weiter</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../../../images/achso-icon.png" alt="AchSo! Icon" class="footer-logo">
+                    <span class="footer-brand">AchSo!</span>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang-de="Links" data-lang-en="Links" data-lang-ar="روابط" data-lang-fa="پیوندها">Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../../index.html" data-lang-de="Startseite" data-lang-en="Home" data-lang-ar="الرئيسية" data-lang-fa="خانه">Startseite</a></li>
+                        <li><a href="../../../about.html" data-lang-de="Über uns" data-lang-en="About us" data-lang-ar="عنا" data-lang-fa="درباره ما">Über uns</a></li>
+                        <li><a href="../../../contact.html" data-lang-de="Kontakt" data-lang-en="Contact" data-lang-ar="اتصل بنا" data-lang-fa="تماس با ما">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AchSo! - Learning Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+/* Interkulturelle Kommunikation Exercise Specific Styles */
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* Slide Content */
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.text-content {
+    flex: 1;
+}
+
+.slide {
+    display: none;
+    min-height: 400px;
+    padding: var(--spacing-xl) 0;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Image Containers */
+.image-container {
+    margin: var(--spacing-md) 0;
+    text-align: center;
+}
+
+.full-width-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.centered-image {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+/* Image Row for displaying multiple images side by side */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin: var(--spacing-md) 0;
+}
+
+.image-row-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Video Container */
+.video-container {
+    margin: var(--spacing-md) 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border-radius: var(--border-radius-md);
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-md);
+}
+
+/* Character (Blopp) */
+.character {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.blopp-animation {
+    width: 200px;
+    height: 200px;
+    border: none;
+}
+
+/* Navigation */
+.slide-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-xl);
+}
+
+.nav-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #3771be;
+}
+
+.nav-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.nav-btn i {
+    font-size: 0.8rem;
+}
+
+/* Comparison Box Styles */
+.comparison-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+.comparison-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(72, 130, 207, 0.1);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.comparison-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.comparison-item ul {
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-md);
+}
+
+.comparison-item li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Interactive Elements */
+.interactive-element {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    margin: var(--spacing-md) 0;
+}
+
+/* Quiz Styles */
+.quiz-container, .gesture-quiz-container {
+    width: 100%;
+}
+
+.quiz-container h3, .gesture-quiz-container h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    background-color: #f8f8f8;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s;
+}
+
+.quiz-option:hover {
+    background-color: #f0f0f0;
+}
+
+.quiz-option input[type="radio"] {
+    margin-top: 0.3rem;
+}
+
+.quiz-option label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #3771be;
+}
+
+.submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Feedback Box */
+.feedback-box {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    display: none;
+}
+
+.feedback-box.correct {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 4px solid #28a745;
+}
+
+.feedback-box.incorrect {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+}
+
+.feedback-box.warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+}
+
+/* Gesture Quiz Specific Styles */
+.gesture-quiz {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.gesture-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid #eee;
+}
+
+.gesture-image {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: var(--border-radius-sm);
+}
+
+.gesture-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.gesture-option {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Summary Box */
+.summary-box {
+    background-color: rgba(72, 130, 207, 0.1);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.summary-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.summary-box ul {
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+}
+
+.summary-box li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.4;
+}
+
+/* CTA Button */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+    background-color: #3771be;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Custom properties */
+:root {
+    --primary-color: #4882CF;
+    --text-color: #333333;
+    --bg-color: #f5f7fa;
+    --border-color: #e1e4e8;
+    
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .slide-content {
+        flex-direction: row;
+    }
+    
+    .text-content {
+        padding-right: var(--spacing-lg);
+    }
+    
+    .character {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .comparison-box {
+        flex-direction: column;
+    }
+    
+    .comparison-item {
+        width: 100%;
+    }
+    
+    .centered-image {
+        max-width: 100%;
+    }
+}

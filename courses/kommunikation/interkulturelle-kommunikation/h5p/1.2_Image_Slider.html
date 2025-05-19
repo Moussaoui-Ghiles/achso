@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5P Image Slider</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            background-color: #f5f7fa;
+        }
+        .content {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #4882CF;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 300px;
+        }
+        .slider-slide {
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .slider-button {
+            background-color: #4882CF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .slider-button:hover {
+            background-color: #3771be;
+        }
+        .slider-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .slider-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .slider-indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #e1e4e8;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .slider-indicator.active {
+            background-color: #4882CF;
+        }
+        .image-caption {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        .slider-title {
+            color: #4882CF;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Unterschiedliche Kommunikationsstile</h1>
+        
+        <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <div class="slider-slide">
+                    <h2 class="slider-title">Klares Wasser</h2>
+                    <img src="Eisberg klares Wasser.svg" alt="Eisberg mit klarem Wasser" width="250">
+                    <p class="image-caption">Personen mit ähnlichem kulturellem Hintergrund verstehen sich leichter, weil sie durch "klares Wasser" sehen können.</p>
+                </div>
+                <div class="slider-slide">
+                    <h2 class="slider-title">Trübes Wasser</h2>
+                    <img src="Eisberge in trübem Wasser_  Paul und Olena sitzen jeweils auf ihrem Eisberg .svg" alt="Eisberge mit trübem Wasser" width="250">
+                    <p class="image-caption">Personen mit unterschiedlichem kulturellem Hintergrund können sich schwerer verstehen, weil das "Wasser trüb" ist.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-nav">
+            <button class="slider-button" id="prevButton" disabled>Vorherige</button>
+            <button class="slider-button" id="nextButton">Nächste</button>
+        </div>
+        
+        <div class="slider-indicators" id="sliderIndicators">
+            <span class="slider-indicator active" data-index="0"></span>
+            <span class="slider-indicator" data-index="1"></span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wrapper = document.getElementById('sliderWrapper');
+            const slides = document.querySelectorAll('.slider-slide');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            const indicators = document.querySelectorAll('.slider-indicator');
+            
+            let currentIndex = 0;
+            
+            // Update UI based on current index
+            function updateUI() {
+                wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update buttons
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex === slides.length - 1;
+                
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Event listeners for buttons
+            prevButton.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateUI();
+                }
+            });
+            
+            nextButton.addEventListener('click', function() {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    updateUI();
+                }
+            });
+            
+            // Event listeners for indicators
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = parseInt(this.dataset.index, 10);
+                    updateUI();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

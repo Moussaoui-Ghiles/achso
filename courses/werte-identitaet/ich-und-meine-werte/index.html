@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lerne mehr über persönliche Werte und ihre Bedeutung in unserem Leben. Ein interaktiver Kurs von AchSo!">
+    <title>Ich und meine Werte - AchSo!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- H5P Integration -->
+    <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js"></script>
+</head>
+<body class="theme-values">
+    <header class="exercise-header">
+        <div class="container">
+            <nav class="navigation">
+                <a href="../../../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Zurück zur Übersicht
+                </a>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="exercise-content">
+        <div class="container">
+            <div class="slides-container" id="exercise-slides">
+                <!-- Slide 1 -->
+                <section class="slide active" id="slide-1">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h1>Ich und meine Werte</h1>
+                            <div class="video-container">
+                                <video controls>
+                                    <source src="videos/2.1_Geschicte_Sara.mp4" type="video/mp4">
+                                    Dein Browser unterstützt keine Videos.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 2 -->
+                <section class="slide" id="slide-2">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Was würdest du an Saras Stelle tun?</h2>
+                            <div class="custom-quiz" id="sara-quiz">
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="option1" name="sara-choice" value="option1">
+                                        <label for="option1">Schwester verraten</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="option2" name="sara-choice" value="option2">
+                                        <label for="option2">Lügen und hoffen, dass beide den Job behalten können</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="option3" name="sara-choice" value="option3">
+                                        <label for="option3">Nichts sagen und zu zweit entlassen werden</label>
+                                    </div>
+                                </div>
+                                <button class="submit-btn" id="sara-quiz-submit">Überprüfen</button>
+                                <div class="feedback-box" id="sara-quiz-feedback" style="display: none;">
+                                    <p><strong>Lösungsfeedback:</strong> Deine Antwort ist richtig! Sie ist richtig, weil alle Antworten richtig sind. Egal, wie man sich entscheidet, es gibt bei dieser Geschichte keine gute und keine schlechte Lösung.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 3 -->
+                <section class="slide" id="slide-3">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Ein Dilemma</h2>
+                            <p>Wenn Sara ihre Schwester verrät, ist sie eine schlechte und untreue Schwester. Wenn sie nichts sagt, dann ist sie unehrlich.</p>
+                            <p>Das ist ein Dilemma. Hier stehen zwei Dinge in Konkurrenz:</p>
+                            <p>Auf der einen Seite der Zusammenhalt der Familie und auf der anderen Seite die Ehrlichkeit.</p>
+                            <p>Das sind zwei positive Werte. Jeder Mensch hat Werte.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 4 -->
+                <section class="slide" id="slide-4">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Was bedeutet "wertvoll"?</h2>
+                            <p>Vielleicht kennst du das Wort „wertvoll“. Handys sind wertvoll, das neue Fahrrad, die teuren Schuhe. Meistens meinen wir damit, wieviel Geld etwas gekostet hat. Manchmal hat das Wort „wertvoll“ oder „Wert“ aber auch noch eine andere Bedeutung:</p>
+                            <p>Dabei geht es nicht um Geld, sondern wie wichtig etwas für uns ist. Große Ideen wie Freundschaft und Liebe, Macht, Höflichkeit oder Glaube. Solche Ideen können für uns sehr wertvoll sein. Und deswegen spricht man von Werten.</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/fragend3.html" class="blopp-animation"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 5 -->
+                <section class="slide" id="slide-5">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Handeln nach Werten</h2>
+                            <p>Menschen handeln nach ihren Werten, die sie haben. Es kann passieren, dass man in einer Situation ist, in der man sich zwischen zwei seiner Werte entscheiden muss.</p>
+                            <p>Auch in der Geschichte von Sara und ihrer Schwester, muss Sara sich für einen Wert entscheiden. Hierbei gibt es aber kein richtig oder falsch.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/2.1_Kompass.gif" alt="Kompass-Animation" class="centered-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 6 -->
+                <section class="slide" id="slide-6">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Die Bedeutung von Werten</h2>
+                            <p>Werte bestimmen also unsere Handlungen und Entscheidungen. Wie man sich entscheidet, hängt davon ab, welcher Wert einem wichtiger ist. In Saras Geschichte ist es entweder der Zusammenhalt der Familie oder Ehrlichkeit.</p>
+                            <p>Jeden Tag, bei jeder Entscheidung, bei jeder Bewertung und Überlegung spielen Werte eine wichtige Rolle.</p>
+                            <p>Werte bestimmen dein Handeln, beeinflussen deine Wahrnehmung und deine Einstellungen. Sie geben dir Orientierung im Leben.</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/nervös2.html" class="blopp-animation"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 7 -->
+                <section class="slide" id="slide-7">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Wertewolke</h2>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/2.1_Wertewolke.jpg" alt="Wertewolke - Eine Sammlung verschiedener Werte" class="full-width-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 8 -->
+                <section class="slide" id="slide-8">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Persönliche Werte</h2>
+                            <p>Schau mal, auf der nächsten Folie habe ich einige Werte rausgesucht. Mir ist zum Beispiel Hilfsbereitschaft, Innovation und Humor wichtig. Andere finden diese Werte vielleicht gar nicht wichtig. So hat jede Person eine persönliche Rangfolge von Werten.</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/Freude_12.html" class="blopp-animation"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 9 -->
+                <section class="slide" id="slide-9">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Wertevisualisierung</h2>
+                        </div>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/2.1_AnimationFast.mp4" type="video/mp4">
+                                Dein Browser unterstützt keine Videos.
+                            </video>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 10 -->
+                <section class="slide" id="slide-10">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Der Wertekreis</h2>
+                            <p>Viele Werte, die auf der ganzen Welt wichtig sind, können in einem Kreis angeordnet werden. In dem Kreis liegen Werte, die sich ähnlich sind, nah beieinander, z.B. Tradition und Sicherheit. Werte, die sich eher widersprechen und nicht so gut zusammenpassen, liegen im Kreis gegenüber, z.B. Freiheit und Sicherheit.</p>
+                            <p>In unserer Darstellung bilden die Werte einzelne Sterne, weswegen für jede Person eine individuelle Sternenkarte entsteht.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 11 -->
+                <section class="slide" id="slide-11">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Deine persönlichen Werte</h2>
+                            <p>Kennst du deine persönlichen Werte? Nach welchen Werten handelst du jeden Tag? Hier siehst du einen Kreis, in dem die jeweiligen Sterne noch fehlen! Ziehe die Sterne auf die Position im Kreis, die dich am besten beschreibt. Wenn der Stern innen im Kreis liegt, ist dir dieser Wert gar nicht wichtig, positionierst du ihn außen im Kreis, ist er dir sehr wichtig!</p>
+                        </div>
+                        <div class="h5p-container wertekreis-container">
+                            <iframe src="images/2.1_Wertekreis.html" class="wertekreis-iframe" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen" allow="camera; microphone; geolocation; fullscreen"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 12 -->
+                <section class="slide" id="slide-12">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Deine Werte</h2>
+                            <p>Ahhhh so sind also deine Werte verteilt, sehr interessant!</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/Freude_12.html" class="blopp-animation"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 13 -->
+                <section class="slide" id="slide-13">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Unterschiedliche Werte</h2>
+                            <p>Werte, die einem selbst wertvoll erscheinen, können von einer anderen Person oder anderen Gruppen als weniger wertvoll oder sogar als fragwürdig erachtet werden. Wenn wir unsere eigenen Werte und die der anderen Menschen kennen, fördert das ein respektvolles und verständnisvolles Miteinander.</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/OnboardingFragend_oben.html" class="blopp-animation"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 14 -->
+                <section class="slide" id="slide-14">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Verschiedene Werte-Sternkarten</h2>
+                            <p>Schau dir mal die Werte-Sternkarten von Natalia, Clara, Sara und Faiz an. Darin sieht man die unterschiedlichen persönlichen Werte, die sie haben. Aber auch Werte, die sie teilen.</p>
+                        </div>
+                        <div class="people-gallery">
+                            <div class="person-preview">
+                                <img src="images/2.1_Sara.jpg" alt="Sara" class="person-image">
+                                <p>Sara</p>
+                            </div>
+                            <div class="person-preview">
+                                <img src="images/2.1_Rahel.jpg" alt="Olena" class="person-image">
+                                <p>Olena</p>
+                            </div>
+                            <div class="person-preview">
+                                <img src="images/2.1_Edris.jpg" alt="Edris" class="person-image">
+                                <p>Faiz</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 15 -->
+                <section class="slide" id="slide-15">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Natalia</h2>
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-info">
+                                <div class="profile-image-container">
+                                    <img src="images/2.1_Olena.jpg" alt="Natalia" class="profile-image">
+                                </div>
+                                <div class="audio-player">
+                                    <audio controls>
+                                        <source src="audio/2.1_a_Vorstellung_Natalia.mp3" type="audio/mpeg">
+                                        Dein Browser unterstützt keine Audiowiedergabe.
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="wertekreis-image-container">
+                                <img src="images/2.1_Wertekreis_Olena.jpg" alt="Natalias Wertekreis" class="wertekreis-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 16 -->
+                <section class="slide" id="slide-16">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Clara</h2>
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-info">
+                                <div class="profile-image-container">
+                                    <img src="images/2.1_Rahel.jpg" alt="Clara" class="profile-image">
+                                </div>
+                                <div class="audio-player">
+                                    <audio controls>
+                                        <source src="audio/2.1_a_Vorstellung_Clara.mp3.mp3" type="audio/mpeg">
+                                        Dein Browser unterstützt keine Audiowiedergabe.
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="wertekreis-image-container">
+                                <img src="images/2.1_Wertekreis_Rahel.jpg" alt="Claras Wertekreis" class="wertekreis-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 17 -->
+                <section class="slide" id="slide-17">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Sara</h2>
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-info">
+                                <div class="profile-image-container">
+                                    <img src="images/2.1_Sara.jpg" alt="Sara" class="profile-image">
+                                </div>
+                                <div class="audio-player">
+                                    <audio controls>
+                                        <source src="audio/2.1_a_Vorstellung_Sara.mp3.mp3" type="audio/mpeg">
+                                        Dein Browser unterstützt keine Audiowiedergabe.
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="wertekreis-image-container">
+                                <img src="images/2.1_Wertekreis_Sara.jpg" alt="Saras Wertekreis" class="wertekreis-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 18 -->
+                <section class="slide" id="slide-18">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Faiz</h2>
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-info">
+                                <div class="profile-image-container">
+                                    <img src="images/2.1_Edris.jpg" alt="Faiz" class="profile-image">
+                                </div>
+                                <div class="audio-player">
+                                    <audio controls>
+                                        <source src="audio/2.1_a_Vorstellung_Faiz.mp3.mp3" type="audio/mpeg">
+                                        Dein Browser unterstützt keine Audiowiedergabe.
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="wertekreis-image-container">
+                                <img src="images/2.1_Wertekreis_Edris.jpg" alt="Faiz' Wertekreis" class="wertekreis-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 19 -->
+                <section class="slide" id="slide-19">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Veränderungen von Werten</h2>
+                            <p>Werte können in uns verankert sein und über einen Zeitraum stabil sein. Aber sie können sich auch verändern. Wenn sich äußere Bedingungen verändern, verändern sich meistens auch die eigenen Werte oder die Wichtigkeit von Werten. Das passiert durch neue Bekanntschaften, neue Orte und neue Erfahrungen, die wir machen. Ereignisse in unserem Leben können also dazu führen, dass sich unsere Werte ändern.</p>
+                            <p>Das können alle möglichen Ereignisse sein:</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="images/2.1_Ereignisse.gif" alt="Verschiedene Lebensereignisse, die Werte verändern können" class="centered-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 20 -->
+                <section class="slide" id="slide-20">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Veränderung eigener Werte</h2>
+                            <p>Also ich bin ja auch nicht mehr der Blopp, der ich vor ein paar Jahren mal war. Vielleicht siehst du auch bei dir eine Veränderung in deinen Werten?! Möglicherweise haben sich deine Werte gewandelt. Vielleicht ist durch ein Erlebnis ein Wert weniger wichtig geworden, ein anderer Wert ist dafür wichtiger geworden. Vielleicht hältst du aber auch an einigen alten Werten fest -- das kann Sicherheit geben.</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/fragend3.html" class="blopp-animation"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 21 -->
+                <section class="slide" id="slide-21">
+                    <div class="slide-content">
+                        <div class="text-content">
+                            <h2>Geschafft!</h2>
+                            <p>Super! Du hast die Übung geschafft! Jetzt kennst du dich besser mit Werten aus und konntest deine persönlichen Werte herausfinden!</p>
+                        </div>
+                        <div class="blopp-container">
+                            <iframe src="../../../images/Blopp/Freude_12.html" class="blopp-animation"></iframe>
+                        </div>
+                        <div class="cta-container">
+                            <a href="../../../index.html" class="cta-button">
+                                <i class="fas fa-home"></i>
+                                Zurück zur Hauptseite
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="navigation-buttons">
+                <div class="buttons-container">
+                    <button class="prev-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Zurück
+                    </button>
+                    <button class="next-btn">
+                        Weiter
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
