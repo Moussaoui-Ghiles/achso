@@ -1,0 +1,214 @@
+document.addEventListener('DOMContentLoaded', function() {
+    initializeExercise();
+    initializeCustomQuizzes();
+});
+
+function initializeExercise() {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const progressBar = document.querySelector('.progress');
+    const progressText = document.querySelector('.progress-text');
+    let currentSlide = 0;
+
+    // Initialize first slide
+    slides[0].classList.add('active');
+    updateNavigation();
+    updateProgress();
+
+    // Navigation button event listeners
+    prevBtn.addEventListener('click', showPreviousSlide);
+    nextBtn.addEventListener('click', showNextSlide);
+
+    function showPreviousSlide() {
+        if (currentSlide > 0) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide--;
+            slides[currentSlide].classList.add('active');
+            updateNavigation();
+            updateProgress();
+            pauseAllMedia();
+        }
+    }
+
+    function showNextSlide() {
+        if (currentSlide < slides.length - 1) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide++;
+            slides[currentSlide].classList.add('active');
+            updateNavigation();
+            updateProgress();
+            pauseAllMedia();
+        }
+    }
+
+    function updateNavigation() {
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === slides.length - 1;
+    }
+
+    function updateProgress() {
+        const progress = ((currentSlide + 1) / slides.length) * 100;
+        progressBar.style.width = `${progress}%`;
+        progressText.textContent = `${Math.round(progress)}%`;
+    }
+
+    function pauseAllMedia() {
+        // Pause all videos
+        document.querySelectorAll('video').forEach(video => {
+            video.pause();
+        });
+    }
+
+    // Video handling
+    document.querySelectorAll('video').forEach(video => {
+        video.addEventListener('ended', function() {
+            const nextBtn = document.querySelector('.next-btn');
+            if (nextBtn && !nextBtn.disabled) {
+                nextBtn.classList.add('highlight');
+                setTimeout(() => nextBtn.classList.remove('highlight'), 2000);
+            }
+        });
+    });
+
+    // H5P handling - ensure proper sizing and interaction
+    const h5pIframes = document.querySelectorAll('.h5p-iframe');
+    h5pIframes.forEach(iframe => {
+        iframe.style.width = '100%';
+        iframe.style.height = '600px';
+        iframe.style.border = 'none';
+        iframe.setAttribute('allowfullscreen', 'true');
+        iframe.setAttribute('allow', 'camera; microphone; geolocation; fullscreen');
+        
+        // Add load event listener to ensure content is interactive
+        iframe.addEventListener('load', function() {
+            console.log('H5P content loaded successfully');
+        });
+        
+        iframe.addEventListener('error', function() {
+            console.error('H5P content failed to load:', iframe.src);
+        });
+    });
+
+    // Blopp animation handling
+    const bloppIframes = document.querySelectorAll('.blopp-animation');
+    bloppIframes.forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            console.log('Blopp animation loaded successfully:', iframe.src);
+        });
+        
+        iframe.addEventListener('error', function() {
+            console.error('Blopp animation failed to load:', iframe.src);
+            // Fallback: hide the iframe if it fails to load
+            iframe.style.display = 'none';
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            // Check if page is RTL
+            const isRTL = document.documentElement.dir === 'rtl';
+            if (isRTL) {
+                showNextSlide();
+            } else {
+                showPreviousSlide();
+            }
+        } else if (e.key === 'ArrowRight') {
+            // Check if page is RTL
+            const isRTL = document.documentElement.dir === 'rtl';
+            if (isRTL) {
+                showPreviousSlide();
+            } else {
+                showNextSlide();
+            }
+        }
+    });
+
+    // Touch navigation
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+        const isRTL = document.documentElement.dir === 'rtl';
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right
+                if (isRTL) {
+                    showNextSlide();
+                } else {
+                    showPreviousSlide();
+                }
+            } else {
+                // Swipe left
+                if (isRTL) {
+                    showPreviousSlide();
+                } else {
+                    showNextSlide();
+                }
+            }
+        }
+    }
+}
+
+function initializeCustomQuizzes() {
+    // Custom quiz handling for workplace course
+    const quizSubmitButtons = document.querySelectorAll('[id$="-quiz-submit"]');
+    
+    quizSubmitButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const quizName = this.id.replace('-submit', '');
+            const selectedOption = document.querySelector(`input[name="${quizName}"]:checked`);
+            const feedbackBox = document.getElementById(quizName + '-feedback');
+            
+            if (selectedOption) {
+                // Show feedback
+                if (feedbackBox) {
+                    feedbackBox.style.display = 'block';
+                }
+                
+                // Highlight the next button after answering
+                const nextBtn = document.querySelector('.next-btn');
+                if (nextBtn && !nextBtn.disabled) {
+                    nextBtn.classList.add('highlight');
+                    setTimeout(() => nextBtn.classList.remove('highlight'), 2000);
+                }
+            } else {
+                // Get current language for alert message
+                const currentLang = document.documentElement.lang || 'de';
+                const messages = {
+                    de: 'Bitte wähle eine Option.',
+                    ar: 'يرجى اختيار خيار.',
+                    fa: 'لطفا یک گزینه انتخاب کنید.'
+                };
+                alert(messages[currentLang] || messages.de);
+            }
+        });
+    });
+}
+
+// Additional functionality for workplace-specific interactions
+function initializeWorkplaceInteractions() {
+    // Add any workplace-specific interactive elements here
+    // For example: career path animations, job comparison tools, etc.
+    
+    // Placeholder for future interactive elements
+    console.log('Workplace course initialized');
+}
+
+// Call workplace-specific initialization
+document.addEventListener('DOMContentLoaded', function() {
+    initializeWorkplaceInteractions();
+}); 

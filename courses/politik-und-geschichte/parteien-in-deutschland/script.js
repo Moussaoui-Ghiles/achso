@@ -1,140 +1,56 @@
 // Parteien in Deutschland - Exercise Script
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Elements
+    // Initialize with German content
+    const currentLanguage = 'de';
+    
+    // Navigation functionality
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
     const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const progressBar = document.getElementById('progress-bar');
-    const progressText = document.getElementById('progress-text');
-    const languageBtns = document.querySelectorAll('.language-btn');
-    
-    // State
-    let currentSlideIndex = 0;
-    const totalSlides = slides.length;
-    let currentLanguage = 'de'; // Default language
-    
-    // Initialize progress bar
-    updateProgressBar();
-    
-    // Event Listeners
-    prevBtn.addEventListener('click', goToPreviousSlide);
-    nextBtn.addEventListener('click', goToNextSlide);
-    
-    // Language selection
-    languageBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
-            
-            // Update active state
-            languageBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-        });
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        
+        // Update navigation buttons
+        if (index === slides.length - 1) {
+            nextBtn.innerHTML = `Zurück zur Übersicht <i class="fas fa-home"></i>`;
+        } else {
+            nextBtn.innerHTML = `Weiter <i class="fas fa-arrow-right"></i>`;
+        }
+        
+        prevBtn.style.display = index === 0 ? 'none' : 'block';
+    }
+
+    // Initialize first slide
+    showSlide(0);
+
+    // Event listeners for navigation
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide === slides.length - 1) {
+            window.location.href = '../../index.html';
+        } else {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
     });
-    
-    // Initialize with the correct language content
-    changeLanguage(currentLanguage);
-    
+
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    });
+
     // Check if there's a saved progress for this exercise
     const savedProgress = localStorage.getItem('parteien_in_deutschland_progress');
     if (savedProgress) {
         const savedIndex = parseInt(savedProgress);
-        if (savedIndex > 0 && savedIndex < totalSlides) {
-            goToSlide(savedIndex);
+        if (savedIndex > 0 && savedIndex < slides.length) {
+            showSlide(savedIndex);
         }
-    }
-    
-    // Functions
-    function goToPreviousSlide() {
-        if (currentSlideIndex > 0) {
-            goToSlide(currentSlideIndex - 1);
-        }
-    }
-    
-    function goToNextSlide() {
-        if (currentSlideIndex < totalSlides - 1) {
-            goToSlide(currentSlideIndex + 1);
-        }
-    }
-    
-    function goToSlide(index) {
-        // Hide current slide
-        slides[currentSlideIndex].classList.remove('active');
-        
-        // Show new slide
-        currentSlideIndex = index;
-        slides[currentSlideIndex].classList.add('active');
-        
-        // Update buttons state
-        updateButtonsState();
-        
-        // Update progress bar
-        updateProgressBar();
-        
-        // Save progress
-        localStorage.setItem('parteien_in_deutschland_progress', currentSlideIndex);
-        
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    
-    function updateButtonsState() {
-        // Disable prev button on first slide
-        prevBtn.disabled = currentSlideIndex === 0;
-        
-        // Change next button on last slide
-        if (currentSlideIndex === totalSlides - 1) {
-            nextBtn.innerHTML = `<span data-lang-${currentLanguage}="Zurück zur Übersicht">Zurück zur Übersicht</span> <i class="fas fa-home"></i>`;
-            nextBtn.onclick = function() {
-                window.location.href = '../../../index.html';
-            };
-        } else {
-            nextBtn.innerHTML = `<span data-lang-${currentLanguage}="Weiter">Weiter</span> <i class="fas fa-arrow-right"></i>`;
-            nextBtn.onclick = goToNextSlide;
-        }
-        
-        // Update the button text for current language
-        updateLanguageInElement(nextBtn);
-    }
-    
-    function updateProgressBar() {
-        const progress = ((currentSlideIndex + 1) / totalSlides) * 100;
-        progressBar.style.width = `${progress}%`;
-        progressText.textContent = `${Math.round(progress)}%`;
-    }
-    
-    function changeLanguage(lang) {
-        currentLanguage = lang;
-        
-        document.querySelectorAll('[data-lang-de], [data-lang-en], [data-lang-ar], [data-lang-fa]').forEach(el => {
-            updateLanguageInElement(el);
-        });
-        
-        // Update direction for Arabic and Persian
-        if (lang === 'ar' || lang === 'fa') {
-            document.documentElement.dir = 'rtl';
-            document.body.classList.add('rtl');
-        } else {
-            document.documentElement.dir = 'ltr';
-            document.body.classList.remove('rtl');
-        }
-        
-        // Update button states for the new language
-        updateButtonsState();
-    }
-    
-    function updateLanguageInElement(el) {
-        const langAttr = `data-lang-${currentLanguage}`;
-        if (el.hasAttribute(langAttr)) {
-            el.textContent = el.getAttribute(langAttr);
-        }
-        
-        // For elements with children (like buttons with spans and icons)
-        const langSpans = el.querySelectorAll(`[${langAttr}]`);
-        langSpans.forEach(span => {
-            span.textContent = span.getAttribute(langAttr);
-        });
     }
     
     // Handle any videos that need to play automatically

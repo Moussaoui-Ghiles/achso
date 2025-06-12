@@ -87,9 +87,21 @@ function initializeExercise() {
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') {
-            showPreviousSlide();
+            // Check if page is RTL
+            const isRTL = document.documentElement.dir === 'rtl';
+            if (isRTL) {
+                showNextSlide();
+            } else {
+                showPreviousSlide();
+            }
         } else if (e.key === 'ArrowRight') {
-            showNextSlide();
+            // Check if page is RTL
+            const isRTL = document.documentElement.dir === 'rtl';
+            if (isRTL) {
+                showPreviousSlide();
+            } else {
+                showNextSlide();
+            }
         }
     });
 
@@ -109,19 +121,30 @@ function initializeExercise() {
     function handleSwipe() {
         const swipeThreshold = 50;
         const swipeDistance = touchEndX - touchStartX;
+        const isRTL = document.documentElement.dir === 'rtl';
 
         if (Math.abs(swipeDistance) > swipeThreshold) {
             if (swipeDistance > 0) {
-                showPreviousSlide();
+                // Swipe right
+                if (isRTL) {
+                    showNextSlide();
+                } else {
+                    showPreviousSlide();
+                }
             } else {
-                showNextSlide();
+                // Swipe left
+                if (isRTL) {
+                    showPreviousSlide();
+                } else {
+                    showNextSlide();
+                }
             }
         }
     }
 }
 
 function initializeCustomQuizzes() {
-    // Sara's choice quiz (slide 2)
+    // Sara's choice quiz (slide 2 in German, may be different in other languages)
     const saraQuizSubmit = document.getElementById('sara-quiz-submit');
     if (saraQuizSubmit) {
         saraQuizSubmit.addEventListener('click', function() {
@@ -139,7 +162,14 @@ function initializeCustomQuizzes() {
                     setTimeout(() => nextBtn.classList.remove('highlight'), 2000);
                 }
             } else {
-                alert('Bitte wähle eine Option.');
+                // Get current language for alert message
+                const currentLang = document.documentElement.lang || 'de';
+                const messages = {
+                    de: 'Bitte wähle eine Option.',
+                    ar: 'يرجى اختيار خيار.',
+                    fa: 'لطفا یک گزینه انتخاب کنید.'
+                };
+                alert(messages[currentLang] || messages.de);
             }
         });
     }

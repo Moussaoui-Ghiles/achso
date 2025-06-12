@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AchSo! Lernplattform</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="AchSo! - Eine niedrigschwellige, mehrsprachige Lernumgebung für neu zugewanderte Migrant*innen und Geflüchtete">
 </head>
 <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="main-header" id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="images/achso-logo.png" alt="AchSo! Logo" class="logo">
+                    <img src="images/achso/logo.png" alt="AchSo! Logo" class="logo">
                     <h1>AchSo!</h1>
                 </div>
                 <div class="header-controls">
-                    <div class="user-profile">
+                    <div class="language-selector">
+                        <select id="languageSelect" class="language-dropdown" aria-label="Sprache auswählen">
+                            <option value="de" selected>Deutsch</option>
+                            <option value="ar">العربية</option>
+                            <option value="fa">فارسی</option>
+                        </select>
+                    </div>
+                    <div class="user-profile" role="button" tabindex="0" aria-label="Benutzerprofil">
                         <i class="fas fa-user-circle"></i>
-                        <span>Mein Profil</span>
+                        <span data-lang-de="Mein Profil" 
+                              data-lang-ar="ملفي الشخصي" 
+                              data-lang-fa="پروفایل من">
+                            Mein Profil
+                        </span>
                     </div>
                 </div>
             </div>
@@ -31,124 +43,145 @@
     <main class="main-content">
         <div class="container">
             <!-- Hero Section -->
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">AchSo! Lernplattform</h1>
-                    <p class="hero-subtitle">Eine niedrigschwellige, mehrsprachige Lernumgebung für neu zugewanderte Migrant*innen und Geflüchtete</p>
-                    <a href="#courses" class="cta-button">Übungen entdecken</a>
-                </div>
-                <div class="hero-image">
-                    <img src="images/achso/blopp-character.png" alt="Blopp Charakter" class="blopp-hero-image">
+            <section class="hero-section" role="banner">
+                <div class="hero-wrapper">
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-lang-de="AchSo! Lernplattform" 
+                                           data-lang-ar="منصة AchSo! التعليمية" 
+                                           data-lang-fa="پلتفرم آموزشی AchSo!">
+                            AchSo! Lernplattform
+                        </h1>
+                        <p class="hero-subtitle" data-lang-de="Eine niedrigschwellige, mehrsprachige Lernumgebung für neu zugewanderte Migrant*innen und Geflüchtete"
+                                               data-lang-ar="بيئة تعليمية متعددة اللغات للمهاجرين واللاجئين الجدد"
+                                               data-lang-fa="یک محیط یادگیری چند زبانه برای مهاجران و پناهندگان جدید">
+                            Eine niedrigschwellige, mehrsprachige Lernumgebung für neu zugewanderte Migrant*innen und Geflüchtete
+                        </p>
+                        <a href="#courses" class="cta-button" data-lang-de="Übungen entdecken" 
+                                                       data-lang-ar="اكتشف التمارين" 
+                                                       data-lang-fa="کشف تمرینات">
+                            <i class="fas fa-rocket"></i>
+                            <span>Übungen entdecken</span>
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <iframe src="images/blopp/Freude_12.html" title="Blopp Charakter (fröhlich)" class="blopp-hero-image" style="border:none; width:300px; height:300px; background:transparent;" allowfullscreen></iframe>
+                    </div>
                 </div>
             </section>
             
             <!-- Course Content -->
             <section id="courses" class="courses-section">
-                <h2 class="page-title">Lernmodule</h2>
-                <p class="page-subtitle">Entdecke unsere interaktiven Lernmodule und starte deine Bildungsreise</p>
+                <h2 class="page-title" data-lang-de="Lernmodule" 
+                                    data-lang-ar="وحدات التعلم" 
+                                    data-lang-fa="ماژول‌های یادگیری">
+                    Lernmodule
+                </h2>
+                <p class="page-subtitle" data-lang-de="Entdecke unsere interaktiven Lernmodule und starte deine Bildungsreise"
+                                       data-lang-ar="اكتشف وحدات التعلم التفاعلية وابدأ رحلة تعليمك"
+                                       data-lang-fa="ماژول‌های یادگیری تعاملی ما را کشف کنید و سفر آموزشی خود را آغاز کنید">
+                    Entdecke unsere interaktiven Lernmodule und starte deine Bildungsreise
+                </p>
             
             <div class="courses-list">
                 <!-- Course 1: Communication -->
-                <div class="course-container">
+                <div class="course-container" data-course="1">
                     <div class="course-header" data-course-id="1" style="background-color: #4882CF;">
                         <div class="course-title-container">
                             <span class="course-icon">💬</span>
-                            <h3 class="course-title">Kommunication</h3>
+                            <h3 class="course-title" data-lang-de="Kommunikation" 
+                                               data-lang-ar="التواصل" 
+                                               data-lang-fa="ارتباطات">
+                                Kommunikation
+                            </h3>
                         </div>
-                        <button class="toggle-btn" data-course-id="1">
-                            <span class="btn-text" 
-                                  data-lang-de="Übungen anzeigen" 
-                                  data-lang-en="View exercises"
-                                  data-lang-ar="عرض التمارين" 
-                                  data-lang-fa="نمایش تمرین‌ها">
+                        <button class="toggle-btn" data-course-id="1" aria-expanded="false" aria-controls="exercises-course-1">
+                            <span class="btn-text" data-lang-de="Übungen anzeigen" 
+                                               data-lang-ar="عرض التمارين" 
+                                               data-lang-fa="نمایش تمرینات">
                                 Übungen anzeigen
                             </span>
                             <span class="arrow-icon">▼</span>
                         </button>
                     </div>
-                    <div class="exercises-list" id="exercises-course-1">
+                    <div class="exercises-list" id="exercises-course-1" role="region" aria-labelledby="course-1-title">
                         <!-- Exercise items -->
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">1.1</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Wahrnehmung und Wahrheit" 
-                                      data-lang-en="Perception and Truth">
+                                <span class="exercise-title" data-lang-de="Wahrnehmung und Wahrheit" 
+                                                       data-lang-ar="الإدراك والحقيقة" 
+                                                       data-lang-fa="ادراک و حقیقت">
                                     Wahrnehmung und Wahrheit
                                 </span>
                             </div>
-                            <a href="courses/kommunikation/wahrnehmung-und-wahrheit/index.html" class="start-btn" style="background-color: #4882CF;">
+                            <a href="courses/kommunikation/wahrnehmung-und-wahrheit/index.html" class="start-btn" style="background-color: #4882CF;" aria-label="Übung Wahrnehmung und Wahrheit starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">1.2</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Interkulturelle Kommunikation" 
-                                      data-lang-en="Intercultural Communication">
+                                <span class="exercise-title" data-lang-de="Interkulturelle Kommunikation" 
+                                                       data-lang-ar="التواصل بين الثقافات" 
+                                                       data-lang-fa="ارتباطات بین‌فرهنگی">
                                     Interkulturelle Kommunikation
                                 </span>
                             </div>
-                            <a href="courses/kommunikation/interkulturelle-kommunikation/index.html" class="start-btn" style="background-color: #4882CF;">
+                            <a href="courses/kommunikation/interkulturelle-kommunikation/index.html" class="start-btn" style="background-color: #4882CF;" data-lang-href-de="courses/kommunikation/interkulturelle-kommunikation/index.html" data-lang-href-ar="courses/kommunikation/interkulturelle-kommunikation/index.ar.html" data-lang-href-fa="courses/kommunikation/interkulturelle-kommunikation/index.fa.html" aria-label="Übung Interkulturelle Kommunikation starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Course 2: Values and Identity -->
-                <div class="course-container">
+                <div class="course-container" data-course="2">
                     <div class="course-header" data-course-id="2" style="background-color: #F18F01;">
                         <div class="course-title-container">
                             <span class="course-icon">🧠</span>
-                            <h3 class="course-title" 
-                                data-lang-de="Werte und Identität" 
-                                data-lang-en="Values and Identity"
-                                data-lang-ar="القيم والهوية" 
-                                data-lang-fa="ارزش‌ها و هویت">
+                            <h3 class="course-title" data-lang-de="Werte und Identität" 
+                                               data-lang-ar="القيم والهوية" 
+                                               data-lang-fa="ارزش‌ها و هویت">
                                 Werte und Identität
                             </h3>
                         </div>
-                        <button class="toggle-btn" data-course-id="2">
-                            <span class="btn-text" 
-                                  data-lang-de="Übungen anzeigen" 
-                                  data-lang-en="View exercises"
-                                  data-lang-ar="عرض التمارين" 
-                                  data-lang-fa="نمایش تمرین‌ها">
+                        <button class="toggle-btn" data-course-id="2" aria-expanded="false" aria-controls="exercises-course-2">
+                            <span class="btn-text" data-lang-de="Übungen anzeigen" 
+                                               data-lang-ar="عرض التمارين" 
+                                               data-lang-fa="نمایش تمرینات">
                                 Übungen anzeigen
                             </span>
                             <span class="arrow-icon">▼</span>
                         </button>
                     </div>
-                    <div class="exercises-list" id="exercises-course-2">
+                    <div class="exercises-list" id="exercises-course-2" role="region" aria-labelledby="course-2-title">
                         <!-- Exercise items -->
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">2.1</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Ich und meine Werte" 
-                                      data-lang-en="Me and my Values">
+                                <span class="exercise-title" data-lang-de="Ich und meine Werte" 
+                                                       data-lang-ar="أنا وقيمي" 
+                                                       data-lang-fa="من و ارزش‌هایم">
                                     Ich und meine Werte
                                 </span>
                             </div>
-                            <a href="courses/werte-identitaet/ich-und-meine-werte/index.html" class="start-btn" style="background-color: #F18F01;">
+                            <a href="courses/werte-identitaet/ich-und-meine-werte/index.html" class="start-btn" style="background-color: #F18F01;" data-lang-href-de="courses/werte-identitaet/ich-und-meine-werte/index.html" data-lang-href-ar="courses/werte-identitaet/ich-und-meine-werte/index.ar.html" data-lang-href-fa="courses/werte-identitaet/ich-und-meine-werte/index.fa.html" aria-label="Übung Ich und meine Werte starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                         
@@ -156,70 +189,62 @@
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">2.2</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Ich und meine Identität" 
-                                      data-lang-en="Me and my Identity"
-                                      data-lang-ar="أنا وهويتي"
-                                      data-lang-fa="من و هویت من">
+                                <span class="exercise-title" data-lang-de="Ich und meine Identität" 
+                                                       data-lang-ar="أنا وهويتي" 
+                                                       data-lang-fa="من و هویتم">
                                     Ich und meine Identität
                                 </span>
                             </div>
-                            <a href="courses/werte-identitaet/ich-und-meine-identitaet/index.html" class="start-btn" style="background-color: #F18F01;">
+                            <a href="courses/werte-identitaet/ich-und-meine-identitaet/index.html" class="start-btn" style="background-color: #F18F01;" aria-label="Übung Ich und meine Identität starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Course 3: Exclusion -->
-                <div class="course-container">
+                <div class="course-container" data-course="3">
                     <div class="course-header" data-course-id="3" style="background-color: #E63946;">
                         <div class="course-title-container">
                             <span class="course-icon">⚖️</span>
-                            <h3 class="course-title" 
-                                data-lang-de="Ausgrenzung" 
-                                data-lang-en="Exclusion"
-                                data-lang-ar="الإقصاء" 
-                                data-lang-fa="محرومیت">
+                            <h3 class="course-title" data-lang-de="Ausgrenzung" 
+                                               data-lang-ar="الإقصاء" 
+                                               data-lang-fa="طرد و محرومیت">
                                 Ausgrenzung
                             </h3>
                         </div>
-                        <button class="toggle-btn" data-course-id="3">
-                            <span class="btn-text" 
-                                  data-lang-de="Übungen anzeigen" 
-                                  data-lang-en="View exercises"
-                                  data-lang-ar="عرض التمارين" 
-                                  data-lang-fa="نمایش تمرین‌ها">
+                        <button class="toggle-btn" data-course-id="3" aria-expanded="false" aria-controls="exercises-course-3">
+                            <span class="btn-text" data-lang-de="Übungen anzeigen" 
+                                               data-lang-ar="عرض التمارين" 
+                                               data-lang-fa="نمایش تمرینات">
                                 Übungen anzeigen
                             </span>
                             <span class="arrow-icon">▼</span>
                         </button>
                     </div>
-                    <div class="exercises-list" id="exercises-course-3">
+                    <div class="exercises-list" id="exercises-course-3" role="region" aria-labelledby="course-3-title">
                         <!-- Exercise items -->
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">3.1</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Vorurteile" 
-                                      data-lang-en="Prejudices"
-                                      data-lang-ar="التحيزات" 
-                                      data-lang-fa="پیش‌داوری‌ها">
+                                <span class="exercise-title" data-lang-de="Vorurteile" 
+                                                       data-lang-ar="التحيز" 
+                                                       data-lang-fa="پیش‌داوری‌ها">
                                     Vorurteile
                                 </span>
                             </div>
-                            <a href="courses/ausgrenzung/vorurteile/index.html" class="start-btn" style="background-color: #E63946;">
+                            <a href="courses/ausgrenzung/vorurteile/index.html" class="start-btn" style="background-color: #E63946;" aria-label="Übung Vorurteile starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                         
@@ -227,21 +252,19 @@
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">3.2</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Diskriminierung" 
-                                      data-lang-en="Discrimination"
-                                      data-lang-ar="التمييز" 
-                                      data-lang-fa="تبعیض">
+                                <span class="exercise-title" data-lang-de="Diskriminierung" 
+                                                       data-lang-ar="التمييز" 
+                                                       data-lang-fa="تبعیض">
                                     Diskriminierung
                                 </span>
                             </div>
-                            <a href="courses/ausgrenzung/diskriminierung/index.html" class="start-btn" style="background-color: #E63946;">
+                            <a href="courses/ausgrenzung/diskriminierung/index.html" class="start-btn" style="background-color: #E63946;" data-lang-href-de="courses/ausgrenzung/diskriminierung/index.html" data-lang-href-ar="courses/ausgrenzung/diskriminierung/index.ar.html" data-lang-href-fa="courses/ausgrenzung/diskriminierung/index.fa.html" aria-label="Übung Diskriminierung starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                         
@@ -249,70 +272,62 @@
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">3.3</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Hilfe bei Rassismuserfahrungen" 
-                                      data-lang-en="Help with Racism Experiences"
-                                      data-lang-ar="المساعدة في تجارب العنصرية" 
-                                      data-lang-fa="کمک در تجربیات نژادپرستی">
+                                <span class="exercise-title" data-lang-de="Hilfe bei Rassismuserfahrungen" 
+                                                       data-lang-ar="المساعدة في مواجهة العنصرية" 
+                                                       data-lang-fa="کمک در مواجهه با نژادپرستی">
                                     Hilfe bei Rassismuserfahrungen
                                 </span>
                             </div>
-                            <a href="courses/ausgrenzung/rassismuserfahrungen/index.html" class="start-btn" style="background-color: #E63946;">
+                            <a href="courses/ausgrenzung/rassismuserfahrungen/index.html" class="start-btn" style="background-color: #E63946;" aria-label="Übung Hilfe bei Rassismuserfahrungen starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Course 4: Politik und Geschichte -->
-                <div class="course-container">
+                <div class="course-container" data-course="4">
                     <div class="course-header" data-course-id="4" style="background-color: #3D5A80;">
                         <div class="course-title-container">
                             <span class="course-icon">🏛️</span>
-                            <h3 class="course-title" 
-                                data-lang-de="Politik und Geschichte" 
-                                data-lang-en="Politics and History"
-                                data-lang-ar="السياسة والتاريخ" 
-                                data-lang-fa="سیاست و تاریخ">
+                            <h3 class="course-title" data-lang-de="Politik und Geschichte" 
+                                               data-lang-ar="السياسة والتاريخ" 
+                                               data-lang-fa="سیاست و تاریخ">
                                 Politik und Geschichte
                             </h3>
                         </div>
-                        <button class="toggle-btn" data-course-id="4">
-                            <span class="btn-text" 
-                                  data-lang-de="Übungen anzeigen" 
-                                  data-lang-en="View exercises"
-                                  data-lang-ar="عرض التمارين" 
-                                  data-lang-fa="نمایش تمرین‌ها">
+                        <button class="toggle-btn" data-course-id="4" aria-expanded="false" aria-controls="exercises-course-4">
+                            <span class="btn-text" data-lang-de="Übungen anzeigen" 
+                                               data-lang-ar="عرض التمارين" 
+                                               data-lang-fa="نمایش تمرینات">
                                 Übungen anzeigen
                             </span>
                             <span class="arrow-icon">▼</span>
                         </button>
                     </div>
-                    <div class="exercises-list" id="exercises-course-4">
+                    <div class="exercises-list" id="exercises-course-4" role="region" aria-labelledby="course-4-title">
                         <!-- Exercise 4.1: Was ist Demokratie -->
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">4.1</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Was ist Demokratie" 
-                                      data-lang-en="What is Democracy"
-                                      data-lang-ar="ما هي الديمقراطية" 
-                                      data-lang-fa="دموکراسی چیست">
+                                <span class="exercise-title" data-lang-de="Was ist Demokratie" 
+                                                       data-lang-ar="ما هي الديمقراطية" 
+                                                       data-lang-fa="دموکراسی چیست">
                                     Was ist Demokratie
                                 </span>
                             </div>
-                            <a href="courses/politik-und-geschichte/was-ist-demokratie/index.html" class="start-btn" style="background-color: #3D5A80;">
+                            <a href="courses/politik-und-geschichte/was-ist-demokratie/index.html" class="start-btn" style="background-color: #3D5A80;" data-lang-href-de="courses/politik-und-geschichte/was-ist-demokratie/index.html" data-lang-href-ar="courses/politik-und-geschichte/was-ist-demokratie/index.ar.html" data-lang-href-fa="courses/politik-und-geschichte/was-ist-demokratie/index.fa.html" aria-label="Übung Was ist Demokratie starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                         
@@ -320,21 +335,19 @@
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">4.2</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Demokratie in Deutschland" 
-                                      data-lang-en="Democracy in Germany"
-                                      data-lang-ar="الديمقراطية في ألمانيا" 
-                                      data-lang-fa="دموکراسی در آلمان">
+                                <span class="exercise-title" data-lang-de="Demokratie in Deutschland" 
+                                                       data-lang-ar="الديمقراطية في ألمانيا" 
+                                                       data-lang-fa="دموکراسی در آلمان">
                                     Demokratie in Deutschland
                                 </span>
                             </div>
-                            <a href="courses/politik-und-geschichte/demokratie-in-deutschland/index.html" class="start-btn" style="background-color: #3D5A80;">
+                            <a href="courses/politik-und-geschichte/demokratie-in-deutschland/index.html" class="start-btn" style="background-color: #3D5A80;" aria-label="Übung Demokratie in Deutschland starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
 
@@ -342,126 +355,111 @@
                         <div class="exercise-item">
                             <div class="exercise-info">
                                 <span class="exercise-number">4.3</span>
-                                <span class="exercise-title" 
-                                      data-lang-de="Parteien in Deutschland" 
-                                      data-lang-en="Political Parties in Germany"
-                                      data-lang-ar="الأحزاب السياسية في ألمانيا" 
-                                      data-lang-fa="احزاب سیاسی در آلمان">
+                                <span class="exercise-title" data-lang-de="Parteien in Deutschland" 
+                                                       data-lang-ar="الأحزاب في ألمانيا" 
+                                                       data-lang-fa="احزاب در آلمان">
                                     Parteien in Deutschland
                                 </span>
                             </div>
-                            <a href="courses/politik-und-geschichte/parteien-in-deutschland/index.html" class="start-btn" style="background-color: #3D5A80;">
+                            <a href="courses/politik-und-geschichte/parteien-in-deutschland/index.html" class="start-btn" style="background-color: #3D5A80;" aria-label="Übung Parteien in Deutschland starten">
                                 <span data-lang-de="Übung starten" 
-                                      data-lang-en="Start exercise"
                                       data-lang-ar="ابدأ التمرين" 
                                       data-lang-fa="شروع تمرین">
                                     Übung starten
                                 </span>
-                            </a>
-                        </div>
-                        
-                        <!-- Exercise: Parteien in Deutschland -->
-                        <div class="exercise-item">
-                            <a href="courses/politik-und-geschichte/parteien-in-deutschland/index.html" class="exercise-link">
-                                <div class="exercise-info">
-                                    <h4 class="exercise-title">Parteien in Deutschland</h4>
-                                    <p class="exercise-description">Lerne die wichtigsten politischen Parteien in Deutschland kennen.</p>
-                                </div>
-                                <span class="exercise-arrow">→</span>
-                            </a>
-                        </div>
-                        
-                        <!-- Exercise: Geschichte des Holocaust -->
-                        <div class="exercise-item">
-                            <a href="courses/politik-und-geschichte/geschichte-des-holocaust/index.html" class="exercise-link">
-                                <div class="exercise-info">
-                                    <h4 class="exercise-title">Geschichte des Holocaust</h4>
-                                    <p class="exercise-description">Verstehe die historischen Ereignisse des Holocaust und seine Bedeutung für heute.</p>
-                                </div>
-                                <span class="exercise-arrow">→</span>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Course 5: Opportunities -->
-                <div class="course-container">
-                    <div class="course-header" data-course-id="5" style="background-color: #06D6A0;">
+                <!-- Course 5: Zukunft & Beruf -->
+                <div class="course-container" data-course="5">
+                    <div class="course-header" data-course-id="5" style="background-color: #2E8B57;">
                         <div class="course-title-container">
-                            <span class="course-icon">🎯</span>
-                            <h3 class="course-title" 
-                                data-lang-de="Chancen" 
-                                data-lang-en="Opportunities"
-                                data-lang-ar="الفرص" 
-                                data-lang-fa="فرصت‌ها">
-                                Chancen
+                            <span class="course-icon">💼</span>
+                            <h3 class="course-title" data-lang-de="Zukunft & Beruf" 
+                                               data-lang-ar="المستقبل والمهنة" 
+                                               data-lang-fa="آینده و شغل">
+                                Zukunft & Beruf
                             </h3>
                         </div>
-                        <button class="toggle-btn" data-course-id="5">
-                            <span class="btn-text" 
-                                  data-lang-de="Übungen anzeigen" 
-                                  data-lang-en="View exercises"
-                                  data-lang-ar="عرض التمارين" 
-                                  data-lang-fa="نمایش تمرین‌ها">
+                        <button class="toggle-btn" data-course-id="5" aria-expanded="false" aria-controls="exercises-course-5">
+                            <span class="btn-text" data-lang-de="Übungen anzeigen" 
+                                               data-lang-ar="عرض التمارين" 
+                                               data-lang-fa="نمایش تمرینات">
                                 Übungen anzeigen
                             </span>
                             <span class="arrow-icon">▼</span>
                         </button>
                     </div>
-                    <div class="exercises-list" id="exercises-course-5">
-                        <!-- Exercise items -->
+                    <div class="exercises-list" id="exercises-course-5" role="region" aria-labelledby="course-5-title">
+                        <!-- Exercise 5.1: Frauen und Männer in der Arbeitswelt -->
+                        <div class="exercise-item">
+                            <div class="exercise-info">
+                                <span class="exercise-number">5.1</span>
+                                <span class="exercise-title" data-lang-de="Frauen und Männer in der Arbeitswelt" 
+                                                       data-lang-ar="النساء والرجال في عالم العمل" 
+                                                       data-lang-fa="زنان و مردان در دنیای کار">
+                                    Frauen und Männer in der Arbeitswelt
+                                </span>
+                            </div>
+                            <a href="courses/zukunft-beruf/frauen-und-maenner-in-der-arbeitswelt/index.html" class="start-btn" style="background-color: #2E8B57;" data-lang-href-de="courses/zukunft-beruf/frauen-und-maenner-in-der-arbeitswelt/index.html" data-lang-href-ar="courses/zukunft-beruf/frauen-und-maenner-in-der-arbeitswelt/index.ar.html" data-lang-href-fa="courses/zukunft-beruf/frauen-und-maenner-in-der-arbeitswelt/index.fa.html" aria-label="Übung Frauen und Männer in der Arbeitswelt starten">
+                                <span data-lang-de="Übung starten" 
+                                      data-lang-ar="ابدأ التمرين" 
+                                      data-lang-fa="شروع تمرین">
+                                    Übung starten
+                                </span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- About AchSo! Section -->
-        <section class="about-section">
-            <div class="about-container">
-                <h2 class="section-title">Kurzüberblick – AchSo!-App und Projekt</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="key-points-table">
-                            <div class="key-point">
-                                <h3>Betreiber</h3>
-                                <p><strong>Drudel 11 e. V.</strong>, eingetragener gemeinnütziger Verein mit Sitz in Jena (Camburger Str. 65).</p>
-                            </div>
-                            <div class="key-point">
-                                <h3>Ziel & Zielgruppe</h3>
-                                <p>Eine <strong>niedrigschwellige, mehrsprachige Lernumgebung</strong> für neu zugewanderte Migrant*innen und Geflüchtete – besonders junge Menschen mit geringen Deutschkenntnissen –, damit sie deutsche Gesellschaftsstrukturen verstehen und selbstbewusst handeln können.</p>
-                            </div>
-                            <div class="key-point">
-                                <h3>Finanzierung</h3>
-                                <p>EU-Asyl-, Migrations- und Integrationsfonds (AMIF) sowie das Thüringer Ministerium für Justiz, Migration und Verbraucherschutz; frühe Projektphase vom Bundesamt für Migration und Flüchtlinge (BAMF) kofinanziert.</p>
-                            </div>
-                            <div class="key-point">
-                                <h3>Produkt</h3>
-                                <p><strong>AchSo!-Mobil-App</strong> (kostenlos, werbefrei, offline nutzbar; Oberfläche auf Deutsch, Arabisch, Persisch, Ukrainisch, demnächst Tigrinya).</p>
-                            </div>
-                            <div class="key-point">
-                                <h3>Didaktisches Konzept</h3>
-                                <p>Gemeinsam mit Fachkräften der Integrationsarbeit und migrierten Jugendlichen entwickelt; Inhalte sind <strong>interaktiv, multimedial und spielerisch</strong>, begleitet vom Maskottchen „Blopp“.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/achso/app-preview.png" alt="AchSo! App Preview" class="app-image">
-                    </div>
-                </div>
+
+        <!-- Förderhinweise Section -->
+        <section class="foerderhinweise-section">
+            <h2 data-lang-de="Förderhinweise" 
+                data-lang-ar="معلومات الدعم" 
+                data-lang-fa="اطلاعات حمایتی">
+                Förderhinweise
+            </h2>
+            <p data-lang-de="Gefördert wird das Projekt 'Der App-Kompass - Praxiseinsatz und Begleitung in der Integrationsarbeit' durch Mittel der Europäischen Union aus dem Asyl-, Migrations- und Integrationsfonds, sowie durch das Thüringer Ministerium für Justiz, Migration und Verbraucherschutz."
+               data-lang-ar="يتم دعم مشروع 'بوصلة التطبيقات - الاستخدام العملي والمرافقة في عمل الاندماج' من خلال أموال الاتحاد الأوروبي من صندوق اللجوء والهجرة والاندماج، وكذلك من خلال وزارة العدل والهجرة وحماية المستهلك في تورينغيا."
+               data-lang-fa="پروژه 'قطب‌نمای برنامه - کاربرد عملی و همراهی در کار ادغام' از طریق بودجه اتحادیه اروپا از صندوق پناهندگی، مهاجرت و ادغام، و همچنین از طریق وزارت عدالت، مهاجرت و حمایت از مصرف‌کننده تورینگن حمایت می‌شود.">
+                Gefördert wird das Projekt 'Der App-Kompass - Praxiseinsatz und Begleitung in der Integrationsarbeit' durch Mittel der Europäischen Union aus dem Asyl-, Migrations- und Integrationsfonds, sowie durch das Thüringer Ministerium für Justiz, Migration und Verbraucherschutz.
+            </p>
+            <div>
+                <img src="images/achso/image-320x81.png" alt="EU Förderlogo" loading="lazy">
+                <img src="images/achso/image-320x76.png" alt="Thüringen Förderlogo" loading="lazy">
+                <img src="images/achso/image-320x320.png" alt="Projektförderlogo" loading="lazy">
             </div>
         </section>
         </div>
     </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Nach oben scrollen" title="Nach oben scrollen">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/drudel11-logo.png" alt="Drudel11 Logo">
+                    <img src="images/drudel11-logo.png" alt="Drudel11 Logo" loading="lazy">
                 </div>
                 <div class="footer-links">
-                    <p>© 2025 Drudel11 e.V. - <a href="#">Impressum</a> - <a href="#">Datenschutz</a></p>
+                    <p>© 2025 Drudel11 e.V. - 
+                        <a href="impressum.html" data-lang-de="Impressum" 
+                                  data-lang-ar="إشعار قانوني" 
+                                  data-lang-fa="اطلاعات قانونی">Impressum</a> - 
+                        <a href="#" data-lang-de="Datenschutz" 
+                                  data-lang-ar="حماية البيانات" 
+                                  data-lang-fa="حفاظت از داده‌ها">Datenschutz</a>
+                    </p>
                 </div>
             </div>
         </div>

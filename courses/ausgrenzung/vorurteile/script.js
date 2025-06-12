@@ -1,4 +1,47 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize with German content
+    const currentLanguage = 'de';
+    
+    // Navigation functionality
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        
+        // Update navigation buttons
+        if (index === slides.length - 1) {
+            nextBtn.innerHTML = `Zurück zur Übersicht <i class="fas fa-home"></i>`;
+        } else {
+            nextBtn.innerHTML = `Weiter <i class="fas fa-arrow-right"></i>`;
+        }
+        
+        prevBtn.style.display = index === 0 ? 'none' : 'block';
+    }
+
+    // Initialize first slide
+    showSlide(0);
+
+    // Event listeners for navigation
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide === slides.length - 1) {
+            window.location.href = '../../index.html';
+        } else {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    });
+
     // Initialize slide navigation
     initSlideNavigation();
     

@@ -1,0 +1,515 @@
+/* Exercise-specific styles for Career/Future course */
+
+/* Custom properties */
+:root {
+    --primary-color: #2E8B57; /* Sea green for Career/Future section */
+    --primary-dark: #256842;
+    --text-color: #2d3436;
+    --background-color: #f8f9fa;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.05);
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
+
+.exercise-header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: white;
+    font-weight: 500;
+    min-width: 40px;
+}
+
+/* Main content styles */
+.exercise-content {
+    margin-top: 80px;
+    padding: 40px 0;
+}
+
+.slides-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    padding: 40px;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.prev-btn, .next-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.prev-btn:disabled:hover, .next-btn:disabled:hover {
+    background-color: #e0e0e0;
+}
+
+.highlight {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Text content styling */
+.text-content {
+    max-width: 100%;
+    line-height: 1.6;
+}
+
+.text-content h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.text-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.text-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.text-content p {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+/* Course-specific styles */
+.learning-objectives {
+    background-color: rgba(46, 139, 87, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.highlight-box {
+    background-color: rgba(46, 139, 87, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.placeholder-content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 2px dashed #dee2e6;
+}
+
+.placeholder-content ul {
+    margin: 12px 0;
+    padding-left: 20px;
+}
+
+.placeholder-content li {
+    margin: 8px 0;
+}
+
+/* Video container */
+.video-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Story text styling */
+.story-text {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.story-text p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+[dir="rtl"] .story-text {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+}
+
+/* H5P integration */
+.h5p-container {
+    margin: 20px 0;
+    min-height: 600px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.h5p-iframe {
+    width: 100%;
+    height: 600px;
+    min-height: 600px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Blopp animation container */
+.blopp-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.blopp-animation {
+    width: 150px;
+    height: 150px;
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.blopp-animation:not([src]) {
+    display: none;
+}
+
+/* Image containers */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.centered-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* RTL support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .navigation {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .back-btn {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .buttons-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .prev-btn {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .next-btn {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .learning-objectives {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+}
+
+[dir="rtl"] .highlight-box {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+}
+
+/* Language-specific font support */
+[lang="ar"] {
+    font-family: 'Poppins', 'Amiri', serif;
+}
+
+[lang="fa"] {
+    font-family: 'Poppins', 'Vazir', sans-serif;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .learning-objectives,
+    .highlight-box,
+    .placeholder-content {
+        margin: 16px 0;
+        padding: 16px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .blopp-animation {
+        width: 120px;
+        height: 120px;
+    }
+
+    .placeholder-content ul {
+        padding-left: 16px;
+    }
+
+    .slide {
+        padding: 20px;
+    }
+}
+
+/* Progress bar styles */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-bar {
+    width: 150px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    min-width: 35px;
+}
+
+[dir="rtl"] .progress-text {
+    text-align: left;
+}
+
+/* Completion section */
+.completion-message {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #2E8B57, #3CB371);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 6px 12px rgba(46, 139, 87, 0.3);
+}
+
+.completion-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.completion-button {
+    background: white;
+    color: #2E8B57;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.completion-button:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button animations */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 16px;
+}
+
+.prev-btn,
+.next-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.prev-btn {
+    order: 1;
+}
+
+.next-btn {
+    order: 2;
+}
+
+.prev-btn:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.next-btn:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.highlight {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+} 

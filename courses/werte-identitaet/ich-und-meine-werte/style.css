@@ -568,3 +568,333 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* Additional CSS for improved RTL support and new content structure */
+
+/* Language selector removed - language switching happens from main page */
+
+/* RTL support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .navigation {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .back-btn {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+/* Language selector CSS removed */
+
+[dir="rtl"] .buttons-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .prev-btn {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .next-btn {
+    margin-right: 1rem;
+    margin-left: 0;
+}
+
+/* Content structure improvements */
+.learning-objectives {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #007bff;
+}
+
+[dir="rtl"] .learning-objectives {
+    border-left: none;
+    border-right: 4px solid #007bff;
+}
+
+.highlight-box {
+    background: #e8f4fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid #b3d7ff;
+}
+
+.dilemma-box {
+    background: #fff3cd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid #ffeaa7;
+}
+
+.examples-box {
+    background: #d4edda;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid #c3e6cb;
+}
+
+.values-list {
+    margin: 1.5rem 0;
+}
+
+.value-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    border-left: 3px solid #28a745;
+}
+
+[dir="rtl"] .value-item {
+    border-left: none;
+    border-right: 3px solid #28a745;
+}
+
+.my-values-list {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.my-values-list .value-item {
+    background: white;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    border-left: 3px solid #007bff;
+    font-weight: 500;
+}
+
+[dir="rtl"] .my-values-list .value-item {
+    border-left: none;
+    border-right: 3px solid #007bff;
+}
+
+.compass-explanation {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid #dee2e6;
+}
+
+.story-text {
+    margin: 1.5rem 0;
+}
+
+.story-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Video container improvements */
+.video-container {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Image container improvements */
+.image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.centered-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Blopp container improvements */
+.blopp-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.blopp-animation {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+}
+
+/* H5P container improvements */
+.h5p-container {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.h5p-iframe {
+    width: 100%;
+    min-height: 400px;
+    border: none;
+}
+
+/* Typography improvements for different languages */
+[lang="ar"] {
+    font-family: 'Noto Sans Arabic', 'Poppins', sans-serif;
+}
+
+[lang="fa"] {
+    font-family: 'Vazirmatn', 'Poppins', sans-serif;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .learning-objectives,
+    .highlight-box,
+    .dilemma-box,
+    .examples-box,
+    .compass-explanation {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .navigation {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .language-selector {
+        margin: 0.5rem 0;
+    }
+    
+    .blopp-animation {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .value-item {
+        padding: 0.8rem;
+    }
+    
+    .my-values-list {
+        padding: 1rem;
+    }
+}
+
+/* Progress bar improvements */
+.progress-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+[dir="rtl"] .progress-text {
+    right: auto;
+    left: 0;
+}
+
+/* Button improvements */
+.navigation-buttons {
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.prev-btn,
+.next-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.prev-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.next-btn {
+    background: #007bff;
+    color: white;
+}
+
+.prev-btn:hover:not(:disabled) {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.next-btn:hover:not(:disabled) {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.highlight {
+    animation: pulse 1s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
